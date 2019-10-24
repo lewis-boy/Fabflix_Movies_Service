@@ -117,6 +117,7 @@ public class MoviesService {
         } catch (NullPointerException e) {
             System.err.println("Config file not found. Using default values.");
             serviceConfigs = new ServiceConfigs();
+            idmConfigs = new IdmConfigs();
         }
     }
 
