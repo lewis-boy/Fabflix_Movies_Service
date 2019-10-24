@@ -202,4 +202,7 @@ public class MoviesService {
         return con;
     }
 
+    public static IdmConfigs getIdmConfigs() {
+        return idmConfigs;
+    }
 }
