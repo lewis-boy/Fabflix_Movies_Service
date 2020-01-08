@@ -1,0 +1,141 @@
+[2019/12/12 16:23:10][CONFIG][initService]  Starting service...
+[2019/12/12 16:23:10][CONFIG][currentConfigs]  Scheme: http://
+[2019/12/12 16:23:10][CONFIG][currentConfigs]  Hostname: 0.0.0.0
+[2019/12/12 16:23:10][CONFIG][currentConfigs]  Port: 12347
+[2019/12/12 16:23:10][CONFIG][currentConfigs]  Path: /api
+[2019/12/12 16:23:10][CONFIG][currentConfigs]  Logger output directory: ./logs/
+[2019/12/12 16:23:10][CONFIG][currentConfigs]  Database hostname: 127.0.0.1
+[2019/12/12 16:23:10][CONFIG][currentConfigs]  Database port: 3306
+[2019/12/12 16:23:10][CONFIG][currentConfigs]  Database username: root
+[2019/12/12 16:23:10][CONFIG][currentConfigs]  Database password provided? true
+[2019/12/12 16:23:10][CONFIG][currentConfigs]  Database name: myMovies
+[2019/12/12 16:23:10][CONFIG][currentConfigs]  Database driver: com.mysql.cj.jdbc.Driver
+[2019/12/12 16:23:10][CONFIG][currentConfigs]  Database connection settings: ?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2019/12/12 16:23:10][CONFIG][currentConfigs]  IDM Scheme: http://
+[2019/12/12 16:23:10][CONFIG][currentConfigs]  IDM Hostname: 0.0.0.0
+[2019/12/12 16:23:10][CONFIG][currentConfigs]  IDM Port: 12346
+[2019/12/12 16:23:10][CONFIG][currentConfigs]  IDM Path: /api/idm
+[2019/12/12 16:23:10][CONFIG][currentConfigs]  IDM Privilege Path: /privilege
+[2019/12/12 16:23:10][CONFIG][connectToDatabase]  Connecting to database...
+[2019/12/12 16:23:10][CONFIG][connectToDatabase]  Database URL: jdbc:mysql://127.0.0.1:3306/myMovies?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2019/12/12 16:23:11][CONFIG][connectToDatabase]  Connected to database: jdbc:mysql://127.0.0.1:3306/myMovies?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2019/12/12 16:23:11][CONFIG][initHTTPServer]  Initializing HTTP server...
+[2019/12/12 16:23:11][CONFIG][initHTTPServer]  Building URI from configs...
+[2019/12/12 16:23:12][CONFIG][initHTTPServer]  Final URI: http://0.0.0.0:12347/api
+[2019/12/12 16:23:12][CONFIG][initHTTPServer]  Set Jersey resources.
+[2019/12/12 16:23:12][CONFIG][initHTTPServer]  Set Jackson as serializer.
+[2019/12/12 16:23:12][CONFIG][initHTTPServer]  Starting HTTP server...
+[2019/12/12 16:23:16][CONFIG][initHTTPServer]  HTTP server started.
+[2019/12/12 16:23:16][CONFIG][initService]  Service initialized.
+[2019/12/12 16:49:01][INFO][thumbnail]  {"movie_ids":["tt0lee8"]}
+[2019/12/12 16:49:01][INFO][modelMapper]  {"movie_ids":["tt0lee8"]}
+[2019/12/12 16:49:01][INFO][modelMapper]  Mapping object
+[2019/12/12 16:49:01][INFO][thumbnail]  All models made successfully
+[2019/12/12 16:49:01][INFO][ThumbnailHandler]  Query: 
+select JSON_OBJECT('movie_id', m.movie_id,
+     'title', m.title,
+     'backdrop_path', m.backdrop_path,
+     'poster_path', m.poster_path, 'hidden', m.hidden)as imovie
+from movie as m where 1=0 || m.movie_id = 'tt0lee8';
+[2019/12/12 16:49:02][INFO][lookForThumbnails]  no movies found
+[2019/12/12 16:49:02][INFO][buildResponseWithHeaders]  Response being built with Result: MOVIE_NOT_FOUND
+[2019/12/12 16:54:51][INFO][thumbnail]  {"movie_ids":["tt0lee9"]}
+[2019/12/12 16:54:51][INFO][modelMapper]  {"movie_ids":["tt0lee9"]}
+[2019/12/12 16:54:51][INFO][modelMapper]  Mapping object
+[2019/12/12 16:54:51][INFO][thumbnail]  All models made successfully
+[2019/12/12 16:54:51][INFO][ThumbnailHandler]  Query: 
+select JSON_OBJECT('movie_id', m.movie_id,
+     'title', m.title,
+     'backdrop_path', m.backdrop_path,
+     'poster_path', m.poster_path, 'hidden', m.hidden)as imovie
+from movie as m where 1=0 || m.movie_id = 'tt0lee9';
+[2019/12/12 16:54:51][INFO][lookForThumbnails]  no movies found
+[2019/12/12 16:54:51][INFO][buildResponseWithHeaders]  Response being built with Result: MOVIE_NOT_FOUND
+[2019/12/12 17:07:37][INFO][thumbnail]  {"movie_ids":["tt4154796"]}
+[2019/12/12 17:07:37][INFO][modelMapper]  {"movie_ids":["tt4154796"]}
+[2019/12/12 17:07:37][INFO][modelMapper]  Mapping object
+[2019/12/12 17:07:37][INFO][thumbnail]  All models made successfully
+[2019/12/12 17:07:37][INFO][ThumbnailHandler]  Query: 
+select JSON_OBJECT('movie_id', m.movie_id,
+     'title', m.title,
+     'backdrop_path', m.backdrop_path,
+     'poster_path', m.poster_path, 'hidden', m.hidden)as imovie
+from movie as m where 1=0 || m.movie_id = 'tt4154796';
+[2019/12/12 17:07:37][INFO][lookForThumbnails]  movies found
+[2019/12/12 17:07:37][INFO][buildThumbnailArray]  TEST 1
+[2019/12/12 17:07:37][INFO][hasPrivilege]  null
+[2019/12/12 17:07:37][INFO][hasPrivilege]  url: http://0.0.0.0:12346/api/idm
+[2019/12/12 17:07:37][INFO][hasPrivilege]  <html><head><title>Grizzly 2.4.4</title><style><!--div.header {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#003300;font-size:22px;-moz-border-radius-topleft: 10px;border-top-left-radius: 10px;-moz-border-radius-topright: 10px;border-top-right-radius: 10px;padding-left: 5px}div.body {font-family:Tahoma,Arial,sans-serif;color:black;background-color:#FFFFCC;font-size:16px;padding-top:10px;padding-bottom:10px;padding-left:10px}div.footer {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#666633;font-size:14px;-moz-border-radius-bottomleft: 10px;border-bottom-left-radius: 10px;-moz-border-radius-bottomright: 10px;border-bottom-right-radius: 10px;padding-left: 5px}BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;}B {font-family:Tahoma,Arial,sans-serif;color:black;}A {color : black;}HR {color : #999966;}--></style> </head><body><div class="header">Request failed.</div><div class="body">Request failed.</div><div class="footer">Grizzly 2.4.4</div></body></html>
+[2019/12/12 17:07:37][WARNING][hasPrivilege]  Unable to map response to POJO: INTERCOMMUNICATION PRIVILEGE
+[2019/12/12 17:07:37][INFO][buildThumbnailArray]  TEST 2
+[2019/12/12 17:07:37][INFO][modelMapper]  {"title": "Avengers: Endgame", "hidden": 0, "movie_id": "tt4154796", "poster_path": "/or06FN3Dka5tukK1e9sl16pB3iy.jpg", "backdrop_path": "/7RyHsO4yDXtBv1zUU3mTpHeQ0d5.jpg"}
+[2019/12/12 17:07:37][INFO][modelMapper]  Mapping object
+[2019/12/12 17:07:37][INFO][buildThumbnailArray]  successfully built array list: 1
+[2019/12/12 17:07:37][INFO][buildThumbnailArray]  successfully built movie array: 1
+[2019/12/12 17:07:37][INFO][buildResponseWithHeaders]  Response being built with Result: MOVIE_FOUND
+[2019/12/12 17:09:51][INFO][thumbnail]  {"movie_ids":["tt0006177"]}
+[2019/12/12 17:09:51][INFO][modelMapper]  {"movie_ids":["tt0006177"]}
+[2019/12/12 17:09:51][INFO][modelMapper]  Mapping object
+[2019/12/12 17:09:51][INFO][thumbnail]  All models made successfully
+[2019/12/12 17:09:51][INFO][ThumbnailHandler]  Query: 
+select JSON_OBJECT('movie_id', m.movie_id,
+     'title', m.title,
+     'backdrop_path', m.backdrop_path,
+     'poster_path', m.poster_path, 'hidden', m.hidden)as imovie
+from movie as m where 1=0 || m.movie_id = 'tt0006177';
+[2019/12/12 17:09:51][INFO][lookForThumbnails]  movies found
+[2019/12/12 17:09:51][INFO][buildThumbnailArray]  TEST 1
+[2019/12/12 17:09:51][INFO][hasPrivilege]  null
+[2019/12/12 17:09:51][INFO][hasPrivilege]  url: http://0.0.0.0:12346/api/idm
+[2019/12/12 17:09:51][INFO][hasPrivilege]  <html><head><title>Grizzly 2.4.4</title><style><!--div.header {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#003300;font-size:22px;-moz-border-radius-topleft: 10px;border-top-left-radius: 10px;-moz-border-radius-topright: 10px;border-top-right-radius: 10px;padding-left: 5px}div.body {font-family:Tahoma,Arial,sans-serif;color:black;background-color:#FFFFCC;font-size:16px;padding-top:10px;padding-bottom:10px;padding-left:10px}div.footer {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#666633;font-size:14px;-moz-border-radius-bottomleft: 10px;border-bottom-left-radius: 10px;-moz-border-radius-bottomright: 10px;border-bottom-right-radius: 10px;padding-left: 5px}BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;}B {font-family:Tahoma,Arial,sans-serif;color:black;}A {color : black;}HR {color : #999966;}--></style> </head><body><div class="header">Request failed.</div><div class="body">Request failed.</div><div class="footer">Grizzly 2.4.4</div></body></html>
+[2019/12/12 17:09:51][WARNING][hasPrivilege]  Unable to map response to POJO: INTERCOMMUNICATION PRIVILEGE
+[2019/12/12 17:09:51][INFO][buildThumbnailArray]  TEST 2
+[2019/12/12 17:09:51][INFO][modelMapper]  {"title": "The Tramp", "hidden": 0, "movie_id": "tt0006177", "poster_path": "/6kcnUwrAdE4d2PCSddAlLbaz33h.jpg", "backdrop_path": "/b28Vmqx6weqm27wB6dzxvBGSZV3.jpg"}
+[2019/12/12 17:09:51][INFO][modelMapper]  Mapping object
+[2019/12/12 17:09:51][INFO][buildThumbnailArray]  successfully built array list: 1
+[2019/12/12 17:09:51][INFO][buildThumbnailArray]  successfully built movie array: 1
+[2019/12/12 17:09:51][INFO][buildResponseWithHeaders]  Response being built with Result: MOVIE_FOUND
+[2019/12/12 17:13:38][INFO][thumbnail]  {"movie_ids":["tt4154796"]}
+[2019/12/12 17:13:38][INFO][modelMapper]  {"movie_ids":["tt4154796"]}
+[2019/12/12 17:13:38][INFO][modelMapper]  Mapping object
+[2019/12/12 17:13:38][INFO][thumbnail]  All models made successfully
+[2019/12/12 17:13:38][INFO][ThumbnailHandler]  Query: 
+select JSON_OBJECT('movie_id', m.movie_id,
+     'title', m.title,
+     'backdrop_path', m.backdrop_path,
+     'poster_path', m.poster_path, 'hidden', m.hidden)as imovie
+from movie as m where 1=0 || m.movie_id = 'tt4154796';
+[2019/12/12 17:13:38][INFO][lookForThumbnails]  movies found
+[2019/12/12 17:13:38][INFO][buildThumbnailArray]  TEST 1
+[2019/12/12 17:13:38][INFO][hasPrivilege]  null
+[2019/12/12 17:13:38][INFO][hasPrivilege]  url: http://0.0.0.0:12346/api/idm
+[2019/12/12 17:13:38][INFO][hasPrivilege]  <html><head><title>Grizzly 2.4.4</title><style><!--div.header {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#003300;font-size:22px;-moz-border-radius-topleft: 10px;border-top-left-radius: 10px;-moz-border-radius-topright: 10px;border-top-right-radius: 10px;padding-left: 5px}div.body {font-family:Tahoma,Arial,sans-serif;color:black;background-color:#FFFFCC;font-size:16px;padding-top:10px;padding-bottom:10px;padding-left:10px}div.footer {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#666633;font-size:14px;-moz-border-radius-bottomleft: 10px;border-bottom-left-radius: 10px;-moz-border-radius-bottomright: 10px;border-bottom-right-radius: 10px;padding-left: 5px}BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;}B {font-family:Tahoma,Arial,sans-serif;color:black;}A {color : black;}HR {color : #999966;}--></style> </head><body><div class="header">Request failed.</div><div class="body">Request failed.</div><div class="footer">Grizzly 2.4.4</div></body></html>
+[2019/12/12 17:13:38][WARNING][hasPrivilege]  Unable to map response to POJO: INTERCOMMUNICATION PRIVILEGE
+[2019/12/12 17:13:38][INFO][buildThumbnailArray]  TEST 2
+[2019/12/12 17:13:38][INFO][modelMapper]  {"title": "Avengers: Endgame", "hidden": 0, "movie_id": "tt4154796", "poster_path": "/or06FN3Dka5tukK1e9sl16pB3iy.jpg", "backdrop_path": "/7RyHsO4yDXtBv1zUU3mTpHeQ0d5.jpg"}
+[2019/12/12 17:13:38][INFO][modelMapper]  Mapping object
+[2019/12/12 17:13:38][INFO][buildThumbnailArray]  successfully built array list: 1
+[2019/12/12 17:13:38][INFO][buildThumbnailArray]  successfully built movie array: 1
+[2019/12/12 17:13:38][INFO][buildResponseWithHeaders]  Response being built with Result: MOVIE_FOUND
+[2019/12/12 17:13:56][INFO][thumbnail]  {"movie_ids":["tt4154796"]}
+[2019/12/12 17:13:56][INFO][modelMapper]  {"movie_ids":["tt4154796"]}
+[2019/12/12 17:13:56][INFO][modelMapper]  Mapping object
+[2019/12/12 17:13:56][INFO][thumbnail]  All models made successfully
+[2019/12/12 17:13:56][INFO][ThumbnailHandler]  Query: 
+select JSON_OBJECT('movie_id', m.movie_id,
+     'title', m.title,
+     'backdrop_path', m.backdrop_path,
+     'poster_path', m.poster_path, 'hidden', m.hidden)as imovie
+from movie as m where 1=0 || m.movie_id = 'tt4154796';
+[2019/12/12 17:13:56][INFO][lookForThumbnails]  movies found
+[2019/12/12 17:13:56][INFO][buildThumbnailArray]  TEST 1
+[2019/12/12 17:13:56][INFO][hasPrivilege]  null
+[2019/12/12 17:13:56][INFO][hasPrivilege]  url: http://0.0.0.0:12346/api/idm
+[2019/12/12 17:13:56][INFO][hasPrivilege]  <html><head><title>Grizzly 2.4.4</title><style><!--div.header {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#003300;font-size:22px;-moz-border-radius-topleft: 10px;border-top-left-radius: 10px;-moz-border-radius-topright: 10px;border-top-right-radius: 10px;padding-left: 5px}div.body {font-family:Tahoma,Arial,sans-serif;color:black;background-color:#FFFFCC;font-size:16px;padding-top:10px;padding-bottom:10px;padding-left:10px}div.footer {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#666633;font-size:14px;-moz-border-radius-bottomleft: 10px;border-bottom-left-radius: 10px;-moz-border-radius-bottomright: 10px;border-bottom-right-radius: 10px;padding-left: 5px}BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;}B {font-family:Tahoma,Arial,sans-serif;color:black;}A {color : black;}HR {color : #999966;}--></style> </head><body><div class="header">Request failed.</div><div class="body">Request failed.</div><div class="footer">Grizzly 2.4.4</div></body></html>
+[2019/12/12 17:13:56][WARNING][hasPrivilege]  Unable to map response to POJO: INTERCOMMUNICATION PRIVILEGE
+[2019/12/12 17:13:56][INFO][buildThumbnailArray]  TEST 2
+[2019/12/12 17:13:56][INFO][modelMapper]  {"title": "Avengers: Endgame", "hidden": 0, "movie_id": "tt4154796", "poster_path": "/or06FN3Dka5tukK1e9sl16pB3iy.jpg", "backdrop_path": "/7RyHsO4yDXtBv1zUU3mTpHeQ0d5.jpg"}
+[2019/12/12 17:13:56][INFO][modelMapper]  Mapping object
+[2019/12/12 17:13:56][INFO][buildThumbnailArray]  successfully built array list: 1
+[2019/12/12 17:13:56][INFO][buildThumbnailArray]  successfully built movie array: 1
+[2019/12/12 17:13:56][INFO][buildResponseWithHeaders]  Response being built with Result: MOVIE_FOUND
