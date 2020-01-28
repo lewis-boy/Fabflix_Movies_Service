@@ -1,10 +1,7 @@
 package edu.uci.ics.luisae.service.movies.core;
 
 import edu.uci.ics.luisae.service.movies.logger.ServiceLogger;
-import edu.uci.ics.luisae.service.movies.models.PeopleRequest;
-import edu.uci.ics.luisae.service.movies.models.PeopleSeachRequest;
-import edu.uci.ics.luisae.service.movies.models.ThumbnailRequest;
-import edu.uci.ics.luisae.service.movies.models.MovieSeachRequest;
+import edu.uci.ics.luisae.service.movies.models.*;
 
 public class QueryBuilder {
     //TODO test this query out on perhaps datagrip
@@ -252,6 +249,28 @@ public class QueryBuilder {
         return query;
     }
 
+    public static String buildRandomMovieQuery(MovieRandomRequest request){
+        String query = "select JSON_OBJECT('movies',JSON_ARRAYAGG(movies)) as Themovies from\n" +
+                "        (select JSON_OBJECT('title',movie.title,\n" +
+                "                            'year',movie.year,\n" +
+                "                            'stars',extra_info.stars,\n" +
+                "                            'poster_path',movie.poster_path,\n" +
+                "                            'backdrop_path',movie.backdrop_path) as movies from movie join\n" +
+                "            (select people.movie_id,people.stars,genres.genres from\n" +
+                "                (select pim.movie_id, GROUP_CONCAT(distinct CONCAT(person.name,':',person.profile_path))as stars\n" +
+                "                from person_in_movie as pim join person on pim.person_id = person.person_id group by pim.movie_id) as people\n" +
+                "                    JOIN\n" +
+                "                (select gim.movie_id, GROUP_CONCAT(distinct genre.name)as genres\n" +
+                "                from genre_in_movie as gim join genre on gim.genre_id = genre.genre_id group by gim.movie_id) as genres\n" +
+                "            ON people.movie_id=genres.movie_id) as extra_info\n" +
+                "        on movie.movie_id=extra_info.movie_id";
+        String where = request.getGenre()==null?"":" where extra_info.genres like '%"+request.getGenre()+"%' ";
+        String orderby = "ORDER BY RAND()";
+        String limit = " limit " + request.getLimit();
+        String end = ") as test;";
+
+        return query + where + orderby + limit + end;
+    }
 
 
 

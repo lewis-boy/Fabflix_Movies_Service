@@ -34,7 +34,9 @@ public enum Result {
     MOVIE_FOUND(210,"Found movie(s) with search parameters.", Status.OK),
     MOVIE_NOT_FOUND(211, "No movies found with search parameters.", Status.OK),
     PEOPLE_FOUND(212, "Found people with the search parameters.",Status.OK),
-    PEOPLE_NOT_FOUND(213,"No people found with search parameters.", Status.OK);
+    PEOPLE_NOT_FOUND(213,"No people found with search parameters.", Status.OK),
+    RANDOM_NOT_FOUND(218,"Random movies were NOT found.", Status.OK),
+    RANDOM_FOUND(219,"Random movies were found.", Status.OK);
 
 
 

@@ -1,141 +1,97 @@
-[2019/12/12 16:23:10][CONFIG][initService]  Starting service...
-[2019/12/12 16:23:10][CONFIG][currentConfigs]  Scheme: http://
-[2019/12/12 16:23:10][CONFIG][currentConfigs]  Hostname: 0.0.0.0
-[2019/12/12 16:23:10][CONFIG][currentConfigs]  Port: 12347
-[2019/12/12 16:23:10][CONFIG][currentConfigs]  Path: /api
-[2019/12/12 16:23:10][CONFIG][currentConfigs]  Logger output directory: ./logs/
-[2019/12/12 16:23:10][CONFIG][currentConfigs]  Database hostname: 127.0.0.1
-[2019/12/12 16:23:10][CONFIG][currentConfigs]  Database port: 3306
-[2019/12/12 16:23:10][CONFIG][currentConfigs]  Database username: root
-[2019/12/12 16:23:10][CONFIG][currentConfigs]  Database password provided? true
-[2019/12/12 16:23:10][CONFIG][currentConfigs]  Database name: myMovies
-[2019/12/12 16:23:10][CONFIG][currentConfigs]  Database driver: com.mysql.cj.jdbc.Driver
-[2019/12/12 16:23:10][CONFIG][currentConfigs]  Database connection settings: ?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
-[2019/12/12 16:23:10][CONFIG][currentConfigs]  IDM Scheme: http://
-[2019/12/12 16:23:10][CONFIG][currentConfigs]  IDM Hostname: 0.0.0.0
-[2019/12/12 16:23:10][CONFIG][currentConfigs]  IDM Port: 12346
-[2019/12/12 16:23:10][CONFIG][currentConfigs]  IDM Path: /api/idm
-[2019/12/12 16:23:10][CONFIG][currentConfigs]  IDM Privilege Path: /privilege
-[2019/12/12 16:23:10][CONFIG][connectToDatabase]  Connecting to database...
-[2019/12/12 16:23:10][CONFIG][connectToDatabase]  Database URL: jdbc:mysql://127.0.0.1:3306/myMovies?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
-[2019/12/12 16:23:11][CONFIG][connectToDatabase]  Connected to database: jdbc:mysql://127.0.0.1:3306/myMovies?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
-[2019/12/12 16:23:11][CONFIG][initHTTPServer]  Initializing HTTP server...
-[2019/12/12 16:23:11][CONFIG][initHTTPServer]  Building URI from configs...
-[2019/12/12 16:23:12][CONFIG][initHTTPServer]  Final URI: http://0.0.0.0:12347/api
-[2019/12/12 16:23:12][CONFIG][initHTTPServer]  Set Jersey resources.
-[2019/12/12 16:23:12][CONFIG][initHTTPServer]  Set Jackson as serializer.
-[2019/12/12 16:23:12][CONFIG][initHTTPServer]  Starting HTTP server...
-[2019/12/12 16:23:16][CONFIG][initHTTPServer]  HTTP server started.
-[2019/12/12 16:23:16][CONFIG][initService]  Service initialized.
-[2019/12/12 16:49:01][INFO][thumbnail]  {"movie_ids":["tt0lee8"]}
-[2019/12/12 16:49:01][INFO][modelMapper]  {"movie_ids":["tt0lee8"]}
-[2019/12/12 16:49:01][INFO][modelMapper]  Mapping object
-[2019/12/12 16:49:01][INFO][thumbnail]  All models made successfully
-[2019/12/12 16:49:01][INFO][ThumbnailHandler]  Query: 
-select JSON_OBJECT('movie_id', m.movie_id,
-     'title', m.title,
-     'backdrop_path', m.backdrop_path,
-     'poster_path', m.poster_path, 'hidden', m.hidden)as imovie
-from movie as m where 1=0 || m.movie_id = 'tt0lee8';
-[2019/12/12 16:49:02][INFO][lookForThumbnails]  no movies found
-[2019/12/12 16:49:02][INFO][buildResponseWithHeaders]  Response being built with Result: MOVIE_NOT_FOUND
-[2019/12/12 16:54:51][INFO][thumbnail]  {"movie_ids":["tt0lee9"]}
-[2019/12/12 16:54:51][INFO][modelMapper]  {"movie_ids":["tt0lee9"]}
-[2019/12/12 16:54:51][INFO][modelMapper]  Mapping object
-[2019/12/12 16:54:51][INFO][thumbnail]  All models made successfully
-[2019/12/12 16:54:51][INFO][ThumbnailHandler]  Query: 
-select JSON_OBJECT('movie_id', m.movie_id,
-     'title', m.title,
-     'backdrop_path', m.backdrop_path,
-     'poster_path', m.poster_path, 'hidden', m.hidden)as imovie
-from movie as m where 1=0 || m.movie_id = 'tt0lee9';
-[2019/12/12 16:54:51][INFO][lookForThumbnails]  no movies found
-[2019/12/12 16:54:51][INFO][buildResponseWithHeaders]  Response being built with Result: MOVIE_NOT_FOUND
-[2019/12/12 17:07:37][INFO][thumbnail]  {"movie_ids":["tt4154796"]}
-[2019/12/12 17:07:37][INFO][modelMapper]  {"movie_ids":["tt4154796"]}
-[2019/12/12 17:07:37][INFO][modelMapper]  Mapping object
-[2019/12/12 17:07:37][INFO][thumbnail]  All models made successfully
-[2019/12/12 17:07:37][INFO][ThumbnailHandler]  Query: 
-select JSON_OBJECT('movie_id', m.movie_id,
-     'title', m.title,
-     'backdrop_path', m.backdrop_path,
-     'poster_path', m.poster_path, 'hidden', m.hidden)as imovie
-from movie as m where 1=0 || m.movie_id = 'tt4154796';
-[2019/12/12 17:07:37][INFO][lookForThumbnails]  movies found
-[2019/12/12 17:07:37][INFO][buildThumbnailArray]  TEST 1
-[2019/12/12 17:07:37][INFO][hasPrivilege]  null
-[2019/12/12 17:07:37][INFO][hasPrivilege]  url: http://0.0.0.0:12346/api/idm
-[2019/12/12 17:07:37][INFO][hasPrivilege]  <html><head><title>Grizzly 2.4.4</title><style><!--div.header {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#003300;font-size:22px;-moz-border-radius-topleft: 10px;border-top-left-radius: 10px;-moz-border-radius-topright: 10px;border-top-right-radius: 10px;padding-left: 5px}div.body {font-family:Tahoma,Arial,sans-serif;color:black;background-color:#FFFFCC;font-size:16px;padding-top:10px;padding-bottom:10px;padding-left:10px}div.footer {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#666633;font-size:14px;-moz-border-radius-bottomleft: 10px;border-bottom-left-radius: 10px;-moz-border-radius-bottomright: 10px;border-bottom-right-radius: 10px;padding-left: 5px}BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;}B {font-family:Tahoma,Arial,sans-serif;color:black;}A {color : black;}HR {color : #999966;}--></style> </head><body><div class="header">Request failed.</div><div class="body">Request failed.</div><div class="footer">Grizzly 2.4.4</div></body></html>
-[2019/12/12 17:07:37][WARNING][hasPrivilege]  Unable to map response to POJO: INTERCOMMUNICATION PRIVILEGE
-[2019/12/12 17:07:37][INFO][buildThumbnailArray]  TEST 2
-[2019/12/12 17:07:37][INFO][modelMapper]  {"title": "Avengers: Endgame", "hidden": 0, "movie_id": "tt4154796", "poster_path": "/or06FN3Dka5tukK1e9sl16pB3iy.jpg", "backdrop_path": "/7RyHsO4yDXtBv1zUU3mTpHeQ0d5.jpg"}
-[2019/12/12 17:07:37][INFO][modelMapper]  Mapping object
-[2019/12/12 17:07:37][INFO][buildThumbnailArray]  successfully built array list: 1
-[2019/12/12 17:07:37][INFO][buildThumbnailArray]  successfully built movie array: 1
-[2019/12/12 17:07:37][INFO][buildResponseWithHeaders]  Response being built with Result: MOVIE_FOUND
-[2019/12/12 17:09:51][INFO][thumbnail]  {"movie_ids":["tt0006177"]}
-[2019/12/12 17:09:51][INFO][modelMapper]  {"movie_ids":["tt0006177"]}
-[2019/12/12 17:09:51][INFO][modelMapper]  Mapping object
-[2019/12/12 17:09:51][INFO][thumbnail]  All models made successfully
-[2019/12/12 17:09:51][INFO][ThumbnailHandler]  Query: 
-select JSON_OBJECT('movie_id', m.movie_id,
-     'title', m.title,
-     'backdrop_path', m.backdrop_path,
-     'poster_path', m.poster_path, 'hidden', m.hidden)as imovie
-from movie as m where 1=0 || m.movie_id = 'tt0006177';
-[2019/12/12 17:09:51][INFO][lookForThumbnails]  movies found
-[2019/12/12 17:09:51][INFO][buildThumbnailArray]  TEST 1
-[2019/12/12 17:09:51][INFO][hasPrivilege]  null
-[2019/12/12 17:09:51][INFO][hasPrivilege]  url: http://0.0.0.0:12346/api/idm
-[2019/12/12 17:09:51][INFO][hasPrivilege]  <html><head><title>Grizzly 2.4.4</title><style><!--div.header {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#003300;font-size:22px;-moz-border-radius-topleft: 10px;border-top-left-radius: 10px;-moz-border-radius-topright: 10px;border-top-right-radius: 10px;padding-left: 5px}div.body {font-family:Tahoma,Arial,sans-serif;color:black;background-color:#FFFFCC;font-size:16px;padding-top:10px;padding-bottom:10px;padding-left:10px}div.footer {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#666633;font-size:14px;-moz-border-radius-bottomleft: 10px;border-bottom-left-radius: 10px;-moz-border-radius-bottomright: 10px;border-bottom-right-radius: 10px;padding-left: 5px}BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;}B {font-family:Tahoma,Arial,sans-serif;color:black;}A {color : black;}HR {color : #999966;}--></style> </head><body><div class="header">Request failed.</div><div class="body">Request failed.</div><div class="footer">Grizzly 2.4.4</div></body></html>
-[2019/12/12 17:09:51][WARNING][hasPrivilege]  Unable to map response to POJO: INTERCOMMUNICATION PRIVILEGE
-[2019/12/12 17:09:51][INFO][buildThumbnailArray]  TEST 2
-[2019/12/12 17:09:51][INFO][modelMapper]  {"title": "The Tramp", "hidden": 0, "movie_id": "tt0006177", "poster_path": "/6kcnUwrAdE4d2PCSddAlLbaz33h.jpg", "backdrop_path": "/b28Vmqx6weqm27wB6dzxvBGSZV3.jpg"}
-[2019/12/12 17:09:51][INFO][modelMapper]  Mapping object
-[2019/12/12 17:09:51][INFO][buildThumbnailArray]  successfully built array list: 1
-[2019/12/12 17:09:51][INFO][buildThumbnailArray]  successfully built movie array: 1
-[2019/12/12 17:09:51][INFO][buildResponseWithHeaders]  Response being built with Result: MOVIE_FOUND
-[2019/12/12 17:13:38][INFO][thumbnail]  {"movie_ids":["tt4154796"]}
-[2019/12/12 17:13:38][INFO][modelMapper]  {"movie_ids":["tt4154796"]}
-[2019/12/12 17:13:38][INFO][modelMapper]  Mapping object
-[2019/12/12 17:13:38][INFO][thumbnail]  All models made successfully
-[2019/12/12 17:13:38][INFO][ThumbnailHandler]  Query: 
-select JSON_OBJECT('movie_id', m.movie_id,
-     'title', m.title,
-     'backdrop_path', m.backdrop_path,
-     'poster_path', m.poster_path, 'hidden', m.hidden)as imovie
-from movie as m where 1=0 || m.movie_id = 'tt4154796';
-[2019/12/12 17:13:38][INFO][lookForThumbnails]  movies found
-[2019/12/12 17:13:38][INFO][buildThumbnailArray]  TEST 1
-[2019/12/12 17:13:38][INFO][hasPrivilege]  null
-[2019/12/12 17:13:38][INFO][hasPrivilege]  url: http://0.0.0.0:12346/api/idm
-[2019/12/12 17:13:38][INFO][hasPrivilege]  <html><head><title>Grizzly 2.4.4</title><style><!--div.header {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#003300;font-size:22px;-moz-border-radius-topleft: 10px;border-top-left-radius: 10px;-moz-border-radius-topright: 10px;border-top-right-radius: 10px;padding-left: 5px}div.body {font-family:Tahoma,Arial,sans-serif;color:black;background-color:#FFFFCC;font-size:16px;padding-top:10px;padding-bottom:10px;padding-left:10px}div.footer {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#666633;font-size:14px;-moz-border-radius-bottomleft: 10px;border-bottom-left-radius: 10px;-moz-border-radius-bottomright: 10px;border-bottom-right-radius: 10px;padding-left: 5px}BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;}B {font-family:Tahoma,Arial,sans-serif;color:black;}A {color : black;}HR {color : #999966;}--></style> </head><body><div class="header">Request failed.</div><div class="body">Request failed.</div><div class="footer">Grizzly 2.4.4</div></body></html>
-[2019/12/12 17:13:38][WARNING][hasPrivilege]  Unable to map response to POJO: INTERCOMMUNICATION PRIVILEGE
-[2019/12/12 17:13:38][INFO][buildThumbnailArray]  TEST 2
-[2019/12/12 17:13:38][INFO][modelMapper]  {"title": "Avengers: Endgame", "hidden": 0, "movie_id": "tt4154796", "poster_path": "/or06FN3Dka5tukK1e9sl16pB3iy.jpg", "backdrop_path": "/7RyHsO4yDXtBv1zUU3mTpHeQ0d5.jpg"}
-[2019/12/12 17:13:38][INFO][modelMapper]  Mapping object
-[2019/12/12 17:13:38][INFO][buildThumbnailArray]  successfully built array list: 1
-[2019/12/12 17:13:38][INFO][buildThumbnailArray]  successfully built movie array: 1
-[2019/12/12 17:13:38][INFO][buildResponseWithHeaders]  Response being built with Result: MOVIE_FOUND
-[2019/12/12 17:13:56][INFO][thumbnail]  {"movie_ids":["tt4154796"]}
-[2019/12/12 17:13:56][INFO][modelMapper]  {"movie_ids":["tt4154796"]}
-[2019/12/12 17:13:56][INFO][modelMapper]  Mapping object
-[2019/12/12 17:13:56][INFO][thumbnail]  All models made successfully
-[2019/12/12 17:13:56][INFO][ThumbnailHandler]  Query: 
-select JSON_OBJECT('movie_id', m.movie_id,
-     'title', m.title,
-     'backdrop_path', m.backdrop_path,
-     'poster_path', m.poster_path, 'hidden', m.hidden)as imovie
-from movie as m where 1=0 || m.movie_id = 'tt4154796';
-[2019/12/12 17:13:56][INFO][lookForThumbnails]  movies found
-[2019/12/12 17:13:56][INFO][buildThumbnailArray]  TEST 1
-[2019/12/12 17:13:56][INFO][hasPrivilege]  null
-[2019/12/12 17:13:56][INFO][hasPrivilege]  url: http://0.0.0.0:12346/api/idm
-[2019/12/12 17:13:56][INFO][hasPrivilege]  <html><head><title>Grizzly 2.4.4</title><style><!--div.header {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#003300;font-size:22px;-moz-border-radius-topleft: 10px;border-top-left-radius: 10px;-moz-border-radius-topright: 10px;border-top-right-radius: 10px;padding-left: 5px}div.body {font-family:Tahoma,Arial,sans-serif;color:black;background-color:#FFFFCC;font-size:16px;padding-top:10px;padding-bottom:10px;padding-left:10px}div.footer {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#666633;font-size:14px;-moz-border-radius-bottomleft: 10px;border-bottom-left-radius: 10px;-moz-border-radius-bottomright: 10px;border-bottom-right-radius: 10px;padding-left: 5px}BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;}B {font-family:Tahoma,Arial,sans-serif;color:black;}A {color : black;}HR {color : #999966;}--></style> </head><body><div class="header">Request failed.</div><div class="body">Request failed.</div><div class="footer">Grizzly 2.4.4</div></body></html>
-[2019/12/12 17:13:56][WARNING][hasPrivilege]  Unable to map response to POJO: INTERCOMMUNICATION PRIVILEGE
-[2019/12/12 17:13:56][INFO][buildThumbnailArray]  TEST 2
-[2019/12/12 17:13:56][INFO][modelMapper]  {"title": "Avengers: Endgame", "hidden": 0, "movie_id": "tt4154796", "poster_path": "/or06FN3Dka5tukK1e9sl16pB3iy.jpg", "backdrop_path": "/7RyHsO4yDXtBv1zUU3mTpHeQ0d5.jpg"}
-[2019/12/12 17:13:56][INFO][modelMapper]  Mapping object
-[2019/12/12 17:13:56][INFO][buildThumbnailArray]  successfully built array list: 1
-[2019/12/12 17:13:56][INFO][buildThumbnailArray]  successfully built movie array: 1
-[2019/12/12 17:13:56][INFO][buildResponseWithHeaders]  Response being built with Result: MOVIE_FOUND
+[2020/01/27 20:13:00][CONFIG][initService]  Starting service...
+[2020/01/27 20:13:00][CONFIG][currentConfigs]  Scheme: http://
+[2020/01/27 20:13:00][CONFIG][currentConfigs]  Hostname: 0.0.0.0
+[2020/01/27 20:13:00][CONFIG][currentConfigs]  Port: 12347
+[2020/01/27 20:13:00][CONFIG][currentConfigs]  Path: /api
+[2020/01/27 20:13:00][CONFIG][currentConfigs]  Logger output directory: ./logs/
+[2020/01/27 20:13:00][CONFIG][currentConfigs]  Database hostname: 127.0.0.1
+[2020/01/27 20:13:00][CONFIG][currentConfigs]  Database port: 3306
+[2020/01/27 20:13:00][CONFIG][currentConfigs]  Database username: root
+[2020/01/27 20:13:00][CONFIG][currentConfigs]  Database password provided? true
+[2020/01/27 20:13:00][CONFIG][currentConfigs]  Database name: myMovies
+[2020/01/27 20:13:00][CONFIG][currentConfigs]  Database driver: com.mysql.cj.jdbc.Driver
+[2020/01/27 20:13:00][CONFIG][currentConfigs]  Database connection settings: ?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2020/01/27 20:13:00][CONFIG][currentConfigs]  IDM Scheme: http://
+[2020/01/27 20:13:00][CONFIG][currentConfigs]  IDM Hostname: 0.0.0.0
+[2020/01/27 20:13:00][CONFIG][currentConfigs]  IDM Port: 12346
+[2020/01/27 20:13:00][CONFIG][currentConfigs]  IDM Path: /api/idm
+[2020/01/27 20:13:00][CONFIG][currentConfigs]  IDM Privilege Path: /privilege
+[2020/01/27 20:13:00][CONFIG][connectToDatabase]  Connecting to database...
+[2020/01/27 20:13:00][CONFIG][connectToDatabase]  Database URL: jdbc:mysql://127.0.0.1:3306/myMovies?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2020/01/27 20:13:01][CONFIG][connectToDatabase]  Connected to database: jdbc:mysql://127.0.0.1:3306/myMovies?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2020/01/27 20:13:01][CONFIG][initHTTPServer]  Initializing HTTP server...
+[2020/01/27 20:13:01][CONFIG][initHTTPServer]  Building URI from configs...
+[2020/01/27 20:13:01][CONFIG][initHTTPServer]  Final URI: http://0.0.0.0:12347/api
+[2020/01/27 20:13:01][CONFIG][initHTTPServer]  Set Jersey resources.
+[2020/01/27 20:13:01][CONFIG][initHTTPServer]  Set Jackson as serializer.
+[2020/01/27 20:13:01][CONFIG][initHTTPServer]  Starting HTTP server...
+[2020/01/27 20:13:02][CONFIG][initHTTPServer]  HTTP server started.
+[2020/01/27 20:13:02][CONFIG][initService]  Service initialized.
+[2020/01/27 20:13:15][INFO][MovieRandomHandler]  Query: 
+select JSON_OBJECT('movies',JSON_ARRAYAGG(movies)) as Themovies from
+        (select JSON_OBJECT('title',movie.title,
+                            'year',movie.year,
+                            'stars',extra_info.stars,
+                            'poster_path',movie.poster_path,
+                            'backdrop_path',movie.backdrop_path) as movies from movie join
+            (select people.movie_id,people.stars,genres.genres from
+                (select pim.movie_id, GROUP_CONCAT(distinct CONCAT(person.name,':',person.profile_path))as stars
+                from person_in_movie as pim join person on pim.person_id = person.person_id group by pim.movie_id) as people
+                    JOIN
+                (select gim.movie_id, GROUP_CONCAT(distinct genre.name)as genres
+                from genre_in_movie as gim join genre on gim.genre_id = genre.genre_id group by gim.movie_id) as genres
+            ON people.movie_id=genres.movie_id) as extra_info
+        on movie.movie_id=extra_info.movie_id where extra_info.genres like '%action%' ORDER BY RAND() limit 10) as test;
+[2020/01/27 20:13:52][INFO][modelMapper]  {"movies": [{"year": 1975, "stars": "Brian Keith:/jtM2bb1un0Lhft4H2FH6DbRd7Qd.jpg,Candice Bergen:/w1ldgTc67oVsaeYvuJKlbR9UOL.jpg,Geoffrey Lewis:/8BABD0pjhefIFpKEZwNnLrkn0wl.jpg,John Huston:/1YV2m0943zGmgQaHHgtFuQhOEKl.jpg,Nadim Sawalha:/94kMNtU2FYXruX4BOOjWrWkoe2x.jpg,Roy Jenson:/swkMoVqkIw3CKTKkIzR2yHEfyF3.jpg,Sean Connery:/ce84udJZ9QRSR44jxwK2apM3DM8.jpg,Steve Kanaly:/iSezeWgTfDbGF6uhqDccainUxNn.jpg,Vladek Sheybal:/ccutGFAuflgNyPXyXd6HE1pwZk5.jpg", "title": "The Wind and the Lion", "poster_path": "/f2R11Ys1asseqyp5fnIMFC6ytE4.jpg", "backdrop_path": "/k9NSgeBIx50BEMRSUyYPUOYxsqb.jpg"}, {"year": 2011, "stars": "Amber Heard:/ft4ACLVFBXaOotbicBLm1fODyZr.jpg,April Littlejohn:/wKEjtciZFZW58PrGBGcrHByZ8JA.jpg,Billy Burke:/89fN0eToreG678XFrMVwuwiKKoy.jpg,Bryan Massey:/aTPBOzNUN1BkbA0H8pCnbRKc2NJ.jpg,Charlotte Ross:/tcGcyyHErFJHH5ofVhb8kdeyBH6.jpg,Christa Campbell:/hWmOTsi5z5wvKcTsaLfWrhAsNJK.jpg,Con Schell:/rClTzcnUhKXLZy13CfVitrpddWK.jpg,David Morse:/5PuSGfBw3Hsdo5jkhZ59NDFCZUm.jpg,Edrick Browne:/rKc64U4YccyEPfEf7VCXbdBmQAx.jpg,Gerry May:/b4HG1tAw8Vv8jeQZrfbebIluSk2.jpg,Henry Kingi:/7NfbNpe2PQZI5BcdvBxAfVfmroi.jpg,Jack McGee:/jSl2RKRaJvtRoS3T5HSw4xeNdwy.jpg,James Landry Hébert:/iFFAjpK2cvBTDpWXzyi7zaLSVUo.jpg,Jamie Teer:/17CXJmuDjhCHJdMqY2U11SH01Ui.jpg,Jeffrey J. Dashnaw:/5Sw0YV4U8Yg7BpN8yVX7vVc8y8x.jpg,Joe Chrest:/fVaVq1UetdXuWyCHeiLsi0704Qg.jpg,Katy Mixon:/o6yDzpvqsq0bObKDGPQdoszRKyW.jpg,Kent Jude Bernard:/4BE1DcMD5nwGd4sgP611ERbiUvy.jpg,Lanie Taylor:/xVZ9gGBGbWZcwMGYIVh4ZC7Ctux.jpg,Marc Macaulay:/eSNgzHn7NUX9iAbG1MLV41lqy14.jpg,Michael Papajohn:/9nVHCoYxCpGh9pO00xp7SybWd7b.jpg,Nick Gomez:/aBMQnvk2zayzgfWrp0rS0Ji1xIs.", "title": "Drive Angry", "poster_path": "/afYwV0EAO8YLRyrTnNaSRysDrCh.jpg", "backdrop_path": "/fjJyicmZ7wfsZrRuv1Ve2Vv0Zlf.jpg"}, {"year": 2011, "stars": "Ana Ortiz:/wMwPs5CVcmW6PjriAqUpr5O1AcS.jpg,Brandon T. Jackson:/dbToaM0GR8zxFFj2CmwDGCbfMXx.jpg,Brian Lafontaine:/nR68GlbxFPQqqhBRgZWkL7vFZ6b.jpg,C.J. Perry:/vb7xtxxQD6gfrXokLZ7NfsESfP0.jpg,Chantal Maurice:/2ijCgRrUDMtwDY1oFic8t3GJrCP.jpg,Christiani Pitts:/wjx7viRufBvgDH6EVLQyZfeReag.jpg,Deonna Young:/liZQGpXGmaUvMDhEttFMNNAOPW1.jpg,Emily Rios:/qOkaoTCgKPgELM1yG26ezyTkuzm.jpg,Faizon Love:/tKz3IMO2jT8NdoDXOlKmcw4wLXf.jpg,Henri Lubatti:/gXK6iqh3NsrCipolEiu2L1jMKTD.jpg,Jasmine Burke:/9ZDAUimwcQjBjs22zrLa5dxATyl.jpg,Jessica Lucas:/kBNLUKEHhnb1XYIeeg3iwbzSoD2.jpg,Justin Price:/iCNa9g6iL5NKnT1NFG9trxFXMrF.jpg,Katherine Neslund:/aXEmTryeou52P2rBx5NoQNUbL2T.jpg,Kayla Perkins:/jFOBdEts6nI4dwgtFHF8bONSQE5.jpg,Ken Jeong:/rEebZHRju1WtSOdvQJB5je5ZNGj.jpg,Lorenzo Pisoni:/6fKO1z1dmqEazbl7zdhcFdb5gLF.jpg,Marc John Jefferies:/zpsC9yA8TzJFFtoSokZvbgcUiAY.jpg,Mari Morrow:/ivvkGg3Oq36eiu1o4PFEJkT4rxp.jpg,Martin Lawrence:/uBVQuIdS3wGCpYaZFEeKZBuiZ2l.jpg,Max Casella:/5CNTDSCBhWPclTLTyTBy8oHUkzb.jpg,Michelle Ang:/n7hRj8WPkgeG7hpNpfi", "title": "Big Mommas: Like Father, Like Son", "poster_path": "/tm2EddDwAfH79K4WAmSnvpHwoje.jpg", "backdrop_path": "/gxrLAo0uGy9uzIleogDOrPlQnFf.jpg"}, {"year": 2006, "stars": "Bogdan Uritescu:/xqUHaxh1FPP6pxeiDWRpRhZSgR4.jpg,Florian Ghimpu:/1SXhgIgukZ0df3CrStK5Iw7jAdt.jpg,Matthew Leitch:/nIsSrvUw4HVqnhuhUijITAtQek8.jpg,Michael Brandon:/c39Vj5XeO35FLebzYEMio0sQtRA.jpg,Natalie Ester:/1TMScwUPpCSMrZhSdyrr7J7TIhh.jpg,Roxana Andronescu:/3t2kdIKxYAZ0LyydT6VrMNf5VG9.jpg,Silvia Colloca:/5Wf49kpOGegR8zmZt1mD6vNlppd.jpg,Stuart Milligan:/9iWz2fMfBt43fNbGlkgBuMQyjCS.jpg,Tania Popa:/twjjvj3VftIQwsMo5S6AubIxfFY.jpg,Tim Dutton:/lYzAZgSn1dkZp7s9NXzO0ke9Nrn.jpg,Valentin Teodosiu:/4LnmLzsYtJuOtESnYB1ns2K4XRw.jpg,Vincenzo Nicoli:/5X8yKJ6pjiMrJftrmlXPWnJU3BR.jpg,Warren Derosa:/qhAXozX516e1MIzvlulorCtpgy1.jpg,Wesley Snipes:/mQB8CpHmJeGFmgYFLo211NZtJYu.jpg,William Hope:/c8ItCgPO3nujp4Etx8Hy0MzOpfM.jpg", "title": "The Detonator", "poster_path": "/tt7p76n4cDBew4CT0dxC62cx7PU.jpg", "backdrop_path": "/rlexr3sYPYoGh8awSzlC2I3H6xV.jpg"}, {"year": 1987, "stars": "Bradley Lavelle:/o6TyiPASzAAVLmJB9CgT2DceZ0v.jpg,Christopher Reeve:/9D4L3XeklsMc4r8FybZSTKON3HR.jpg,Don Fellows:/sQgCr3xz2LVomGMKCvb7rLD9dMX.jpg,Gene Hackman:/qEKcmwc1XstymEniGuCs3KIsGfP.jpg,Jackie Cooper:/3uutX8roJ9nNXwh5nxfnuTPLPGe.jpg,Jim Broadbent:/50TV6UKJKjmqdn1GQNuuCIYHLzP.jpg,Jon Cryer:/lUbtFIFdzGXktaFPgrznBDteI5y.jpg,Mac McDonald:/gejehuptBzsJlPiWKU8B9TTrc7r.jpg,Marc McClure:/5VPLVH1eAiIQ3s7aNjrgvzwTt3t.jpg,Margot Kidder:/98HrmSMx8FhMCeoKEODs3OSGYyv.jpg,Mariel Hemingway:/lNlfYgxGwVSLC4tPJXyos02IRQC.jpg,Mark Pillow:/1wLBofOfETb7XTT16nbwZCHfQb7.jpg,Robert Beatty:/nQrvFDN5pIo4y5qHRgsCJ3zpoQM.jpg,Sam Wanamaker:/fWHTMpVy7DSqkTO01V4fTCjM09M.jpg,William Hootkins:/lGPSg64fsqbWS5PUFKsUKLNOqsx.jpg", "title": "Superman IV: The Quest for Peace", "poster_path": "/q1P6UHWdrtZNkmdnoprV0ILfLlr.jpg", "backdrop_path": "/5VdpO1zWqritRhZnulbbhprBatW.jpg"}, {"year": 2002, "stars": "Andrea Miltner:/bQ3w6aaMWpptbUKkn60LpCtbfDg.jpg,Danny John-Jules:/vAXwBWlPxNv2tQwFTtfeeF23RuT.jpg,Daz Crawford:/zbnP5asYzBmGbIY6frsMyW9Y4lI.jpg,Donnie Yen:/vlKBbOc0htUsDGvcxeULcFXDMRo.jpg,Jan Loukota:/nXBhrNkIMoZipMCygfys1zev1J2.jpg,Jan Révai:/tyAitNTdixWObXhnn3ZXwHfyEFs.jpg,John Salvitti:/ySZt5PmObO8uttGI453SrqgLLHV.jpg,Karel Roden:/fD8B0QSQReOiJ6nojiulNUZXKCT.jpg,Kris Kristofferson:/hiGkNoiAwnUgY9XZ3YhiWMvKngi.jpg,Ladislav Beran:/uxYnIPYBrIdk0cja6XcJ5ui1NvX.jpg,Lennox Brown:/ovaCwDIZmcxCvLCBEoredQcIApe.jpg,Leonor Varela:/o5e0VRJ1mGsvhj8Q8n8HqVVUQp3.jpg,Luke Goss:/hlY2Jkn6wOJoo3F5h8AYaX5XHh9.jpg,Marek Vašut:/f4fs302tc86ZJRWq46kZPmY86KF.jpg,Matt Schulze:/aVXQNuSE7990114QZisNrkK8mJt.jpg,Michael Woods:/dM3YyOBGGT0FdRn5D1VI8uejv1z.jpg,Norman Reedus:/ozHPdO5jAt7ozzdZUgyRAMNPSDW.jpg,Olga Lounová:/eRyOqd7i8i9N8pSgVkyKoSweb22.jpg,Paul Kasey:/f6P4xudwJVEtkzIYh8Ur23U44Sj.jpg,Pete Lee-Wilson:/aqFnMSaNJDj2w37xoN70gwn9pSo.jpg,Rey-Phillip Santos:/cBd3f4nv8oVlkdrgwslyAjX2NvS.jpg,Ron Perlman:/xZyrXT2iEmSOokQRc1hedmxrbTi.", "title": "Blade II", "poster_path": "/jlURNpXCMK830CsGRd939PJLh8c.jpg", "backdrop_path": "/2n0kjNEI3uF0ju9H5jiE3rBk5C0.jpg"}, {"year": 2009, "stars": "Chris Klein:/foKh17RAUIhmfNgZ3TIvHJrNkDR.jpg,Josie Ho:/lbKcMciswqKaG6Sz6RylyoeGkoo.jpg,Kristin Kreuk:/jQVGylAfotE7osIGwGivh6LpCdl.jpg,Michael Clarke Duncan:/A0fXStrmFubDRFS8UeRW7xvcf6S.jpg,Moon Bloodgood:/kqzvpsAgrwMaRK80jO6wHN550wI.jpg,Neal McDonough:/8Vg7WKE4QEGz18at8mQHP9aqEbB.jpg,Robin Shou:/g3l02KaSOv0sDVRijyEO78PXfqy.jpg", "title": "Street Fighter: The Legend of Chun-Li", "poster_path": "/8FJ8A4R48mqM6zoGB9uOlPisZmr.jpg", "backdrop_path": "/2Q0RODEoVX5bp6qZiYIjNIHr90m.jpg"}, {"year": 1984, "stars": "Anna Levine:/A3oxT1n8ecpl0uYomHaMUWGBivu.jpg,Burt Young:/rbSsSkQ72FoGcvwIHUxQWJ92I3W.jpg,Daryl Hannah:/4Wn3bsHa7Js7mYX0iehYN7BuHOi.jpg,Eric Roberts:/sZ6MiyrU6VWFavcArxOBhTMIyYq.jpg,Geraldine Page:/zyGpaCsHZUJRUyFUJNlTQ6dBs6F.jpg,Jack Kehoe:/ttDHV6m9OOAWuXnAorCTDel8vNO.jpg,Joe Grifasi:/cesXbWZaKHeOhsSdfbF9mB9750w.jpg,Kenneth McMillan:/St74rdoCMMJHRMaEY2kU2YmuaD.jpg,M. Emmet Walsh:/dLf79xlsmE40rog0gryjxsZJzml.jpg,Mickey Rourke:/AvGzQ8fvjurGmZW3W1wlQ5WfSeT.jpg,Philip Bosco:/8B8EQk868fQF8fGZ1w33XDV5Z1S.jpg,Ronald Maccone:/ffEKUmCHFYhYFIGknT4snW8mqRX.jpg,Tony Musante:/i1zETdFvGG9vnGtRvdg7PTqpJ5k.jpg,Val Avery:/jqstekVs471L1eFJ9Omz2n2BqEf.jpg", "title": "The Pope of Greenwich Village", "poster_path": "/sSGOyGY1GfYjvI70lJC0Gm8T82k.jpg", "backdrop_path": "/alTSApuicPxJVHc9EO1CP6yGKgz.jpg"}, {"year": 2004, "stars": "Burt Kwouk:/7s1Sul5L6NU2TEfgLarBqrde65v.jpg,Jacqueline Chan:/x6WV3IG7ps6unBvMjC13ojoKNTE.jpg,Jean-Claude Van Damme:/aqZ9RjL5j44HMlBMvTaawhHiGOH.jpg,Philip Tan:/1FhKJFikrUKvpNoYbf5wsmmYo4y.jpg,Simon Yam:/Apus3dKsGBSRgsQg6N5T41F10at.jpg,Valerie Tian:/t7rlGNsg0BqNx24mUdflWFsOuda.jpg", "title": "Wake of Death", "poster_path": "/vfDVpBus7BaUiT6UsjpiedyPtnX.jpg", "backdrop_path": "/geZi37CzwkT1IE7ENs7NjaL5Q7N.jpg"}, {"year": 1983, "stars": "Alun Armstrong:/bndjwAJEebKYUGmLLgGD8VfP9N4.jpg,Andy Bradford:/5esiedhO0bUygYwpIDUyfaU05uu.jpg,Belinda Mayne:/29ht7g8OtvkCmKJmBZ6qFJoRS1R.jpg,Bernard Archard:/q72Xm6o0O6rr72rrIfMWW1co4HA.jpg,Bernard Bresslaw:/eN7BkCAAWcAuvrwwjXXCwT4XI2Z.jpg,Bill Weston:/apVNA3SRNIrB6gu88nGTEhPewI2.jpg,David Battley:/uvkfjZjSrL6VxnlGIoj7I4nryqg.jpg,Derek Lyons:/oO7dJlNLJhYyqdTsoUQAFXp1UQS.jpg,Dicken Ashworth:/wqmO8F6kL53ZWe0wTIieIOCC0HS.jpg,Francesca Annis:/rtbYkuenkq8Kfc5LwzWYtVD3eNH.jpg,Freddie Jones:/mWozC9kZFNhxoRSCBvmykROmMGB.jpg,John Welsh:/qoPjlzQOIzdekKJOCQerL5jNQa9.jpg,Ken Marshall:/zaFq0rDgyYi1870hpB9EL7ruEZf.jpg,Liam Neeson:/tBTGVtytdRr9qaDvKxcDUHxq6fn.jpg,Lindsay Crouse:/p4RmAiZclkk8DWK9zFvqp9gma6H.jpg,Lysette Anthony:/yLTijECWVviLdhB03IYkZSJJLcY.jpg,Robbie Coltrane:/u07QKPs7wvXxzjXi1UUBSGjjmQm.jpg,Todd Carty:/oEwmDnGGB6Ha4CBlQ1SwN5CZUEc.jpg,Trevor Martin:/zvz3ZEm0BNwPVQ1gMPh1bm00eQy.jpg", "title": "Krull", "poster_path": "/4gBMeO66KOXLyYfm1uri04a6kKG.jpg", "backdrop_path": "/lNxD2BA4gOR9ymmqeLVxn2QEqJl.jpg"}]}
+[2020/01/27 20:13:52][INFO][modelMapper]  Mapping object
+[2020/01/27 20:13:52][INFO][print]  title: The Wind and the Lion
+[2020/01/27 20:13:52][INFO][print]  year: 1975
+[2020/01/27 20:13:52][INFO][print]  backdrop: /k9NSgeBIx50BEMRSUyYPUOYxsqb.jpg
+[2020/01/27 20:13:52][INFO][print]  poster: /f2R11Ys1asseqyp5fnIMFC6ytE4.jpg
+[2020/01/27 20:13:52][INFO][print]  Brian Keith:/jtM2bb1un0Lhft4H2FH6DbRd7Qd.jpg,Candice Bergen:/w1ldgTc67oVsaeYvuJKlbR9UOL.jpg,Geoffrey Lewis:/8BABD0pjhefIFpKEZwNnLrkn0wl.jpg,John Huston:/1YV2m0943zGmgQaHHgtFuQhOEKl.jpg,Nadim Sawalha:/94kMNtU2FYXruX4BOOjWrWkoe2x.jpg,Roy Jenson:/swkMoVqkIw3CKTKkIzR2yHEfyF3.jpg,Sean Connery:/ce84udJZ9QRSR44jxwK2apM3DM8.jpg,Steve Kanaly:/iSezeWgTfDbGF6uhqDccainUxNn.jpg,Vladek Sheybal:/ccutGFAuflgNyPXyXd6HE1pwZk5.jpg
+[2020/01/27 20:13:52][INFO][print]  title: Drive Angry
+[2020/01/27 20:13:52][INFO][print]  year: 2011
+[2020/01/27 20:13:52][INFO][print]  backdrop: /fjJyicmZ7wfsZrRuv1Ve2Vv0Zlf.jpg
+[2020/01/27 20:13:52][INFO][print]  poster: /afYwV0EAO8YLRyrTnNaSRysDrCh.jpg
+[2020/01/27 20:13:52][INFO][print]  Amber Heard:/ft4ACLVFBXaOotbicBLm1fODyZr.jpg,April Littlejohn:/wKEjtciZFZW58PrGBGcrHByZ8JA.jpg,Billy Burke:/89fN0eToreG678XFrMVwuwiKKoy.jpg,Bryan Massey:/aTPBOzNUN1BkbA0H8pCnbRKc2NJ.jpg,Charlotte Ross:/tcGcyyHErFJHH5ofVhb8kdeyBH6.jpg,Christa Campbell:/hWmOTsi5z5wvKcTsaLfWrhAsNJK.jpg,Con Schell:/rClTzcnUhKXLZy13CfVitrpddWK.jpg,David Morse:/5PuSGfBw3Hsdo5jkhZ59NDFCZUm.jpg,Edrick Browne:/rKc64U4YccyEPfEf7VCXbdBmQAx.jpg,Gerry May:/b4HG1tAw8Vv8jeQZrfbebIluSk2.jpg,Henry Kingi:/7NfbNpe2PQZI5BcdvBxAfVfmroi.jpg,Jack McGee:/jSl2RKRaJvtRoS3T5HSw4xeNdwy.jpg,James Landry Hébert:/iFFAjpK2cvBTDpWXzyi7zaLSVUo.jpg,Jamie Teer:/17CXJmuDjhCHJdMqY2U11SH01Ui.jpg,Jeffrey J. Dashnaw:/5Sw0YV4U8Yg7BpN8yVX7vVc8y8x.jpg,Joe Chrest:/fVaVq1UetdXuWyCHeiLsi0704Qg.jpg,Katy Mixon:/o6yDzpvqsq0bObKDGPQdoszRKyW.jpg,Kent Jude Bernard:/4BE1DcMD5nwGd4sgP611ERbiUvy.jpg,Lanie Taylor:/xVZ9gGBGbWZcwMGYIVh4ZC7Ctux.jpg,Marc Macaulay:/eSNgzHn7NUX9iAbG1MLV41lqy14.jpg,Michael Papajohn:/9nVHCoYxCpGh9pO00xp7SybWd7b.jpg,Nick Gomez:/aBMQnvk2zayzgfWrp0rS0Ji1xIs.
+[2020/01/27 20:13:52][INFO][print]  title: Big Mommas: Like Father, Like Son
+[2020/01/27 20:13:52][INFO][print]  year: 2011
+[2020/01/27 20:13:52][INFO][print]  backdrop: /gxrLAo0uGy9uzIleogDOrPlQnFf.jpg
+[2020/01/27 20:13:52][INFO][print]  poster: /tm2EddDwAfH79K4WAmSnvpHwoje.jpg
+[2020/01/27 20:13:52][INFO][print]  Ana Ortiz:/wMwPs5CVcmW6PjriAqUpr5O1AcS.jpg,Brandon T. Jackson:/dbToaM0GR8zxFFj2CmwDGCbfMXx.jpg,Brian Lafontaine:/nR68GlbxFPQqqhBRgZWkL7vFZ6b.jpg,C.J. Perry:/vb7xtxxQD6gfrXokLZ7NfsESfP0.jpg,Chantal Maurice:/2ijCgRrUDMtwDY1oFic8t3GJrCP.jpg,Christiani Pitts:/wjx7viRufBvgDH6EVLQyZfeReag.jpg,Deonna Young:/liZQGpXGmaUvMDhEttFMNNAOPW1.jpg,Emily Rios:/qOkaoTCgKPgELM1yG26ezyTkuzm.jpg,Faizon Love:/tKz3IMO2jT8NdoDXOlKmcw4wLXf.jpg,Henri Lubatti:/gXK6iqh3NsrCipolEiu2L1jMKTD.jpg,Jasmine Burke:/9ZDAUimwcQjBjs22zrLa5dxATyl.jpg,Jessica Lucas:/kBNLUKEHhnb1XYIeeg3iwbzSoD2.jpg,Justin Price:/iCNa9g6iL5NKnT1NFG9trxFXMrF.jpg,Katherine Neslund:/aXEmTryeou52P2rBx5NoQNUbL2T.jpg,Kayla Perkins:/jFOBdEts6nI4dwgtFHF8bONSQE5.jpg,Ken Jeong:/rEebZHRju1WtSOdvQJB5je5ZNGj.jpg,Lorenzo Pisoni:/6fKO1z1dmqEazbl7zdhcFdb5gLF.jpg,Marc John Jefferies:/zpsC9yA8TzJFFtoSokZvbgcUiAY.jpg,Mari Morrow:/ivvkGg3Oq36eiu1o4PFEJkT4rxp.jpg,Martin Lawrence:/uBVQuIdS3wGCpYaZFEeKZBuiZ2l.jpg,Max Casella:/5CNTDSCBhWPclTLTyTBy8oHUkzb.jpg,Michelle Ang:/n7hRj8WPkgeG7hpNpfi
+[2020/01/27 20:13:52][INFO][print]  title: The Detonator
+[2020/01/27 20:13:52][INFO][print]  year: 2006
+[2020/01/27 20:13:52][INFO][print]  backdrop: /rlexr3sYPYoGh8awSzlC2I3H6xV.jpg
+[2020/01/27 20:13:52][INFO][print]  poster: /tt7p76n4cDBew4CT0dxC62cx7PU.jpg
+[2020/01/27 20:13:52][INFO][print]  Bogdan Uritescu:/xqUHaxh1FPP6pxeiDWRpRhZSgR4.jpg,Florian Ghimpu:/1SXhgIgukZ0df3CrStK5Iw7jAdt.jpg,Matthew Leitch:/nIsSrvUw4HVqnhuhUijITAtQek8.jpg,Michael Brandon:/c39Vj5XeO35FLebzYEMio0sQtRA.jpg,Natalie Ester:/1TMScwUPpCSMrZhSdyrr7J7TIhh.jpg,Roxana Andronescu:/3t2kdIKxYAZ0LyydT6VrMNf5VG9.jpg,Silvia Colloca:/5Wf49kpOGegR8zmZt1mD6vNlppd.jpg,Stuart Milligan:/9iWz2fMfBt43fNbGlkgBuMQyjCS.jpg,Tania Popa:/twjjvj3VftIQwsMo5S6AubIxfFY.jpg,Tim Dutton:/lYzAZgSn1dkZp7s9NXzO0ke9Nrn.jpg,Valentin Teodosiu:/4LnmLzsYtJuOtESnYB1ns2K4XRw.jpg,Vincenzo Nicoli:/5X8yKJ6pjiMrJftrmlXPWnJU3BR.jpg,Warren Derosa:/qhAXozX516e1MIzvlulorCtpgy1.jpg,Wesley Snipes:/mQB8CpHmJeGFmgYFLo211NZtJYu.jpg,William Hope:/c8ItCgPO3nujp4Etx8Hy0MzOpfM.jpg
+[2020/01/27 20:13:52][INFO][print]  title: Superman IV: The Quest for Peace
+[2020/01/27 20:13:52][INFO][print]  year: 1987
+[2020/01/27 20:13:52][INFO][print]  backdrop: /5VdpO1zWqritRhZnulbbhprBatW.jpg
+[2020/01/27 20:13:52][INFO][print]  poster: /q1P6UHWdrtZNkmdnoprV0ILfLlr.jpg
+[2020/01/27 20:13:52][INFO][print]  Bradley Lavelle:/o6TyiPASzAAVLmJB9CgT2DceZ0v.jpg,Christopher Reeve:/9D4L3XeklsMc4r8FybZSTKON3HR.jpg,Don Fellows:/sQgCr3xz2LVomGMKCvb7rLD9dMX.jpg,Gene Hackman:/qEKcmwc1XstymEniGuCs3KIsGfP.jpg,Jackie Cooper:/3uutX8roJ9nNXwh5nxfnuTPLPGe.jpg,Jim Broadbent:/50TV6UKJKjmqdn1GQNuuCIYHLzP.jpg,Jon Cryer:/lUbtFIFdzGXktaFPgrznBDteI5y.jpg,Mac McDonald:/gejehuptBzsJlPiWKU8B9TTrc7r.jpg,Marc McClure:/5VPLVH1eAiIQ3s7aNjrgvzwTt3t.jpg,Margot Kidder:/98HrmSMx8FhMCeoKEODs3OSGYyv.jpg,Mariel Hemingway:/lNlfYgxGwVSLC4tPJXyos02IRQC.jpg,Mark Pillow:/1wLBofOfETb7XTT16nbwZCHfQb7.jpg,Robert Beatty:/nQrvFDN5pIo4y5qHRgsCJ3zpoQM.jpg,Sam Wanamaker:/fWHTMpVy7DSqkTO01V4fTCjM09M.jpg,William Hootkins:/lGPSg64fsqbWS5PUFKsUKLNOqsx.jpg
+[2020/01/27 20:13:52][INFO][print]  title: Blade II
+[2020/01/27 20:13:52][INFO][print]  year: 2002
+[2020/01/27 20:13:52][INFO][print]  backdrop: /2n0kjNEI3uF0ju9H5jiE3rBk5C0.jpg
+[2020/01/27 20:13:52][INFO][print]  poster: /jlURNpXCMK830CsGRd939PJLh8c.jpg
+[2020/01/27 20:13:52][INFO][print]  Andrea Miltner:/bQ3w6aaMWpptbUKkn60LpCtbfDg.jpg,Danny John-Jules:/vAXwBWlPxNv2tQwFTtfeeF23RuT.jpg,Daz Crawford:/zbnP5asYzBmGbIY6frsMyW9Y4lI.jpg,Donnie Yen:/vlKBbOc0htUsDGvcxeULcFXDMRo.jpg,Jan Loukota:/nXBhrNkIMoZipMCygfys1zev1J2.jpg,Jan Révai:/tyAitNTdixWObXhnn3ZXwHfyEFs.jpg,John Salvitti:/ySZt5PmObO8uttGI453SrqgLLHV.jpg,Karel Roden:/fD8B0QSQReOiJ6nojiulNUZXKCT.jpg,Kris Kristofferson:/hiGkNoiAwnUgY9XZ3YhiWMvKngi.jpg,Ladislav Beran:/uxYnIPYBrIdk0cja6XcJ5ui1NvX.jpg,Lennox Brown:/ovaCwDIZmcxCvLCBEoredQcIApe.jpg,Leonor Varela:/o5e0VRJ1mGsvhj8Q8n8HqVVUQp3.jpg,Luke Goss:/hlY2Jkn6wOJoo3F5h8AYaX5XHh9.jpg,Marek Vašut:/f4fs302tc86ZJRWq46kZPmY86KF.jpg,Matt Schulze:/aVXQNuSE7990114QZisNrkK8mJt.jpg,Michael Woods:/dM3YyOBGGT0FdRn5D1VI8uejv1z.jpg,Norman Reedus:/ozHPdO5jAt7ozzdZUgyRAMNPSDW.jpg,Olga Lounová:/eRyOqd7i8i9N8pSgVkyKoSweb22.jpg,Paul Kasey:/f6P4xudwJVEtkzIYh8Ur23U44Sj.jpg,Pete Lee-Wilson:/aqFnMSaNJDj2w37xoN70gwn9pSo.jpg,Rey-Phillip Santos:/cBd3f4nv8oVlkdrgwslyAjX2NvS.jpg,Ron Perlman:/xZyrXT2iEmSOokQRc1hedmxrbTi.
+[2020/01/27 20:13:52][INFO][print]  title: Street Fighter: The Legend of Chun-Li
+[2020/01/27 20:13:52][INFO][print]  year: 2009
+[2020/01/27 20:13:52][INFO][print]  backdrop: /2Q0RODEoVX5bp6qZiYIjNIHr90m.jpg
+[2020/01/27 20:13:52][INFO][print]  poster: /8FJ8A4R48mqM6zoGB9uOlPisZmr.jpg
+[2020/01/27 20:13:52][INFO][print]  Chris Klein:/foKh17RAUIhmfNgZ3TIvHJrNkDR.jpg,Josie Ho:/lbKcMciswqKaG6Sz6RylyoeGkoo.jpg,Kristin Kreuk:/jQVGylAfotE7osIGwGivh6LpCdl.jpg,Michael Clarke Duncan:/A0fXStrmFubDRFS8UeRW7xvcf6S.jpg,Moon Bloodgood:/kqzvpsAgrwMaRK80jO6wHN550wI.jpg,Neal McDonough:/8Vg7WKE4QEGz18at8mQHP9aqEbB.jpg,Robin Shou:/g3l02KaSOv0sDVRijyEO78PXfqy.jpg
+[2020/01/27 20:13:52][INFO][print]  title: The Pope of Greenwich Village
+[2020/01/27 20:13:52][INFO][print]  year: 1984
+[2020/01/27 20:13:52][INFO][print]  backdrop: /alTSApuicPxJVHc9EO1CP6yGKgz.jpg
+[2020/01/27 20:13:52][INFO][print]  poster: /sSGOyGY1GfYjvI70lJC0Gm8T82k.jpg
+[2020/01/27 20:13:52][INFO][print]  Anna Levine:/A3oxT1n8ecpl0uYomHaMUWGBivu.jpg,Burt Young:/rbSsSkQ72FoGcvwIHUxQWJ92I3W.jpg,Daryl Hannah:/4Wn3bsHa7Js7mYX0iehYN7BuHOi.jpg,Eric Roberts:/sZ6MiyrU6VWFavcArxOBhTMIyYq.jpg,Geraldine Page:/zyGpaCsHZUJRUyFUJNlTQ6dBs6F.jpg,Jack Kehoe:/ttDHV6m9OOAWuXnAorCTDel8vNO.jpg,Joe Grifasi:/cesXbWZaKHeOhsSdfbF9mB9750w.jpg,Kenneth McMillan:/St74rdoCMMJHRMaEY2kU2YmuaD.jpg,M. Emmet Walsh:/dLf79xlsmE40rog0gryjxsZJzml.jpg,Mickey Rourke:/AvGzQ8fvjurGmZW3W1wlQ5WfSeT.jpg,Philip Bosco:/8B8EQk868fQF8fGZ1w33XDV5Z1S.jpg,Ronald Maccone:/ffEKUmCHFYhYFIGknT4snW8mqRX.jpg,Tony Musante:/i1zETdFvGG9vnGtRvdg7PTqpJ5k.jpg,Val Avery:/jqstekVs471L1eFJ9Omz2n2BqEf.jpg
+[2020/01/27 20:13:52][INFO][print]  title: Wake of Death
+[2020/01/27 20:13:52][INFO][print]  year: 2004
+[2020/01/27 20:13:52][INFO][print]  backdrop: /geZi37CzwkT1IE7ENs7NjaL5Q7N.jpg
+[2020/01/27 20:13:52][INFO][print]  poster: /vfDVpBus7BaUiT6UsjpiedyPtnX.jpg
+[2020/01/27 20:13:52][INFO][print]  Burt Kwouk:/7s1Sul5L6NU2TEfgLarBqrde65v.jpg,Jacqueline Chan:/x6WV3IG7ps6unBvMjC13ojoKNTE.jpg,Jean-Claude Van Damme:/aqZ9RjL5j44HMlBMvTaawhHiGOH.jpg,Philip Tan:/1FhKJFikrUKvpNoYbf5wsmmYo4y.jpg,Simon Yam:/Apus3dKsGBSRgsQg6N5T41F10at.jpg,Valerie Tian:/t7rlGNsg0BqNx24mUdflWFsOuda.jpg
+[2020/01/27 20:13:52][INFO][print]  title: Krull
+[2020/01/27 20:13:52][INFO][print]  year: 1983
+[2020/01/27 20:13:52][INFO][print]  backdrop: /lNxD2BA4gOR9ymmqeLVxn2QEqJl.jpg
+[2020/01/27 20:13:52][INFO][print]  poster: /4gBMeO66KOXLyYfm1uri04a6kKG.jpg
+[2020/01/27 20:13:52][INFO][print]  Alun Armstrong:/bndjwAJEebKYUGmLLgGD8VfP9N4.jpg,Andy Bradford:/5esiedhO0bUygYwpIDUyfaU05uu.jpg,Belinda Mayne:/29ht7g8OtvkCmKJmBZ6qFJoRS1R.jpg,Bernard Archard:/q72Xm6o0O6rr72rrIfMWW1co4HA.jpg,Bernard Bresslaw:/eN7BkCAAWcAuvrwwjXXCwT4XI2Z.jpg,Bill Weston:/apVNA3SRNIrB6gu88nGTEhPewI2.jpg,David Battley:/uvkfjZjSrL6VxnlGIoj7I4nryqg.jpg,Derek Lyons:/oO7dJlNLJhYyqdTsoUQAFXp1UQS.jpg,Dicken Ashworth:/wqmO8F6kL53ZWe0wTIieIOCC0HS.jpg,Francesca Annis:/rtbYkuenkq8Kfc5LwzWYtVD3eNH.jpg,Freddie Jones:/mWozC9kZFNhxoRSCBvmykROmMGB.jpg,John Welsh:/qoPjlzQOIzdekKJOCQerL5jNQa9.jpg,Ken Marshall:/zaFq0rDgyYi1870hpB9EL7ruEZf.jpg,Liam Neeson:/tBTGVtytdRr9qaDvKxcDUHxq6fn.jpg,Lindsay Crouse:/p4RmAiZclkk8DWK9zFvqp9gma6H.jpg,Lysette Anthony:/yLTijECWVviLdhB03IYkZSJJLcY.jpg,Robbie Coltrane:/u07QKPs7wvXxzjXi1UUBSGjjmQm.jpg,Todd Carty:/oEwmDnGGB6Ha4CBlQ1SwN5CZUEc.jpg,Trevor Martin:/zvz3ZEm0BNwPVQ1gMPh1bm00eQy.jpg
+[2020/01/27 20:13:52][INFO][buildResponseWithHeaders]  Response being built with Result: RANDOM_FOUND

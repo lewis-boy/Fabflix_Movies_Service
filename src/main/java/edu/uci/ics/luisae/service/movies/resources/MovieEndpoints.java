@@ -4,6 +4,7 @@ import edu.uci.ics.luisae.service.movies.core.LogicHandler;
 import edu.uci.ics.luisae.service.movies.logger.ServiceLogger;
 import edu.uci.ics.luisae.service.movies.models.*;
 import edu.uci.ics.luisae.service.movies.Base.Headers;
+import edu.uci.ics.luisae.service.movies.models.MovieRandomResponse;
 import edu.uci.ics.luisae.service.movies.models.ThumbnailRequest;
 import edu.uci.ics.luisae.service.movies.models.ThumbnailResponse;
 import edu.uci.ics.luisae.service.movies.utilities.Param;
@@ -196,43 +197,36 @@ public class MovieEndpoints {
         return LogicHandler.PeopleIdSearchHandler(heads, response, person_id);
     }
 
+    @Path("random")
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getRandomMovies(@Context HttpHeaders headers,
+                                    @QueryParam("genre") String genre,
+                                    @QueryParam("limit") Integer limit){
+        MovieRandomRequest request = new MovieRandomRequest(genre,limit);
+        MovieRandomResponse response = new MovieRandomResponse();
+        Headers heads = new Headers();
+        heads.setEmail(headers.getHeaderString("email"));
+        heads.setSession_id(headers.getHeaderString("session_id"));
+        heads.setTransaction_id(headers.getHeaderString("transaction_id"));
+        return LogicHandler.MovieRandomHandler(heads, request, response);
+    }
+
 
 
 
     @Path("test")
-    @GET
+    @POST
     @Produces(MediaType.APPLICATION_JSON)
-    public Response test(){
-        Param[] params = new Param[]{
-                Param.create(Types.VARCHAR, "tt0054309")
-        };
-//        try{
-//            PreparedStatement ps = Util.prepareStatement(QueryBuilder.buildPeopleQuery(), params);
-//            ResultSet rs = ps.executeQuery();
-//            People[] people = ClassBuilder.buildPeopleArray(rs);
-//            ServiceLogger.LOGGER.info(String.valueOf(people.length));
-//
-//            PreparedStatement ps2 = Util.prepareStatement(QueryBuilder.buildGenreQuery(), params);
-//            ResultSet rs2 = ps2.executeQuery();
-//            Genre[] genres = ClassBuilder.buildGenreArray(rs2);
-//            ServiceLogger.LOGGER.info(String.valueOf(genres.length));
-//
-//            PreparedStatement ps3 = Util.prepareStatement(QueryBuilder.buildMovieIdQuery(),params);
-//            ResultSet rs3 = ps3.executeQuery();
-//            rs3.next();
-//            FullMovie movie = Util.modelMapper(rs3.getString("theFMovie"), FullMovie.class);
-//
-//            movie.setGenres(genres);
-//            movie.setPeople(people);
-//
-//            movie.print();
-//        }
-//        catch(SQLException e){
-//            ServiceLogger.LOGGER.warning("in the main \n" + e.getMessage());
-//            return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
-//        }
-
-
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response test(String jsonText){
+        //test with json types how to deserialize objects
+        ServiceLogger.LOGGER.info(jsonText);
+        TestDeserializeClass testClass = Util.modelMapper(jsonText, TestDeserializeClass.class);
+        if(testClass == null)
+            ServiceLogger.LOGGER.warning("FAILED");
+        else
+            ServiceLogger.LOGGER.info("PASSED");
         return Response.status(Response.Status.OK).build();
     }
 

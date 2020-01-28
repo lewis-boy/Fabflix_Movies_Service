@@ -1,6 +1,7 @@
 package edu.uci.ics.luisae.service.movies.core;
 
 import edu.uci.ics.luisae.service.movies.Base.Headers;
+import edu.uci.ics.luisae.service.movies.Base.ResponseModel;
 import edu.uci.ics.luisae.service.movies.Base.Result;
 import edu.uci.ics.luisae.service.movies.MoviesService;
 import edu.uci.ics.luisae.service.movies.database.Intercommunication;
@@ -119,6 +120,30 @@ public class LogicHandler {
             }
 
         }catch(SQLException e){ServiceLogger.LOGGER.info(e.getMessage());return response.buildResponseWithHeaders(heads);}
+    }
+
+    public static Response MovieRandomHandler(Headers heads, MovieRandomRequest request, MovieRandomResponse response){
+        String query = QueryBuilder.buildRandomMovieQuery(request);
+        ServiceLogger.LOGGER.info("Query: \n" + query);
+        try{
+            PreparedStatement ps = MoviesService.getCon().prepareStatement(query);
+            ResultSet rs = ps.executeQuery();
+            if(rs.next()){
+                response = Util.modelMapper(rs.getString("Themovies"),MovieRandomResponse.class);
+                for(RandomMovie movie: response.getMovies())
+                    movie.print();
+                response.setResult(Result.RANDOM_FOUND);
+                return response.buildResponseWithHeaders(heads);
+            }
+            else{
+                ServiceLogger.LOGGER.warning("No result Set found");
+                response.setResult(Result.RANDOM_NOT_FOUND);
+                return response.buildResponseWithHeaders(heads);
+            }
+        }
+        catch(SQLException e){ServiceLogger.LOGGER.info(e.getMessage());
+            return response.buildResponseWithHeaders(heads);
+        }
     }
 
 
