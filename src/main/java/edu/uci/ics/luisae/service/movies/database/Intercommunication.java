@@ -15,13 +15,12 @@ import java.io.IOException;
 
 public class Intercommunication {
     public static boolean hasPrivilege(String email, int plevel){
-        ServiceLogger.LOGGER.info(email);
+        ServiceLogger.LOGGER.info("Checking if " + email + " has enough privilege");
         PrivilegeRequest request = new PrivilegeRequest(email,plevel);
         RegisterAndPrivilegeResponse privilegeResponse;
 
         String servicePath = getIdmPath();
         String privilegePath =  MoviesService.getIdmConfigs().getPrivilegePath();
-        ServiceLogger.LOGGER.info("url: " + servicePath);
         Client client = ClientBuilder.newClient();
         client.register(JacksonFeature.class);
 
@@ -34,13 +33,11 @@ public class Intercommunication {
         try{
             ObjectMapper mapper = new ObjectMapper();
             String jsonText = response.readEntity(String.class);
-            ServiceLogger.LOGGER.info(jsonText);
             privilegeResponse = mapper.readValue(jsonText, RegisterAndPrivilegeResponse.class);
             if(jsonText.endsWith("140}"))
                 privilegeResponse.setResult(Result.SUFFICIENT_PLEVEL);
             else
                 privilegeResponse.setResult(Result.INSUFFICIENT_PLEVEL);
-            ServiceLogger.LOGGER.info("Successfully mapped to POJO: INTERCOMMUNICATION PRIVILEGE");
         }catch(IOException e){
             ServiceLogger.LOGGER.warning("Unable to map response to POJO: INTERCOMMUNICATION PRIVILEGE");
             return false;

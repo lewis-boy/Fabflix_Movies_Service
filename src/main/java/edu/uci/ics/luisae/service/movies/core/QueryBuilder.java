@@ -251,7 +251,8 @@ public class QueryBuilder {
 
     public static String buildRandomMovieQuery(MovieRandomRequest request){
         String query = "select JSON_OBJECT('movies',JSON_ARRAYAGG(movies)) as Themovies from\n" +
-                "        (select JSON_OBJECT('title',movie.title,\n" +
+                "        (select JSON_OBJECT('movie_id', movie.movie_id,\n" +
+                "                            'title',movie.title,\n" +
                 "                            'year',movie.year,\n" +
                 "                            'stars',extra_info.stars,\n" +
                 "                            'poster_path',movie.poster_path,\n" +

@@ -5,6 +5,9 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import edu.uci.ics.luisae.service.movies.logger.ServiceLogger;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 public class FullMovie {
     @JsonProperty(value = "movie_id", required = true)
     private String movie_id;
@@ -123,7 +126,9 @@ public class FullMovie {
 
     @JsonProperty(value = "rating", required = true)
     public Double getRating() {
-        return rating;
+        BigDecimal bd = new BigDecimal(rating).setScale(1, RoundingMode.HALF_UP);
+        double newRating = bd.doubleValue();
+        return newRating;
     }
 
     public void setRating(Double rating) {

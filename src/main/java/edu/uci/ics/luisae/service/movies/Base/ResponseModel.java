@@ -50,13 +50,8 @@ public abstract class ResponseModel {
     public Response buildResponse()
     {
         ServiceLogger.LOGGER.info("Response being built with Result: " + result);
-        if(result == null)
-            ServiceLogger.LOGGER.warning("result is NULL");
-
-        if (result == null || result.getStatus() == Response.Status.INTERNAL_SERVER_ERROR) {
-            ServiceLogger.LOGGER.warning("ENTERED WARNING");
+        if (result == null || result.getStatus() == Response.Status.INTERNAL_SERVER_ERROR)
             return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
-        }
 
         return Response.status(result.getStatus()).entity(this).build();
     }
@@ -64,13 +59,8 @@ public abstract class ResponseModel {
     public Response buildResponseWithHeaders(Headers headers)
     {
         ServiceLogger.LOGGER.info("Response being built with Result: " + result);
-        if(result == null)
-            ServiceLogger.LOGGER.warning("result is NULL");
-
-        if (result == null || result.getStatus() == Response.Status.INTERNAL_SERVER_ERROR) {
-            ServiceLogger.LOGGER.warning("ENTERED WARNING");
+        if (result == null || result.getStatus() == Response.Status.INTERNAL_SERVER_ERROR)
             return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
-        }
 
         return Response.status(result.getStatus()).entity(this).header("email",headers.getEmail()).
                 header("session_id", headers.getSession_id()).header("transaction_id",headers.getTransaction_id()).build();

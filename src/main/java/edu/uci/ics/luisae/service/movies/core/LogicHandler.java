@@ -1,7 +1,6 @@
 package edu.uci.ics.luisae.service.movies.core;
 
 import edu.uci.ics.luisae.service.movies.Base.Headers;
-import edu.uci.ics.luisae.service.movies.Base.ResponseModel;
 import edu.uci.ics.luisae.service.movies.Base.Result;
 import edu.uci.ics.luisae.service.movies.MoviesService;
 import edu.uci.ics.luisae.service.movies.database.Intercommunication;
@@ -24,11 +23,9 @@ public class LogicHandler {
         Genre[] genres;
         FullMovie movie;
         try{
-            //get movie info
             PreparedStatement ps3 = Util.prepareStatement(QueryBuilder.buildMovieIdQuery(),params);
             ResultSet rs3 = ps3.executeQuery();
             if(!rs3.next()){
-                ServiceLogger.LOGGER.info("no movies found");
                 response.setResult(Result.MOVIE_NOT_FOUND);
                 return response.buildResponseWithHeaders(heads);
             }
@@ -43,13 +40,13 @@ public class LogicHandler {
             PreparedStatement ps = Util.prepareStatement(QueryBuilder.buildPeopleQuery(), params);
             ResultSet rs = ps.executeQuery();
             people = ClassBuilder.buildPeopleArray(rs);
-            ServiceLogger.LOGGER.info(String.valueOf(people.length));
+//            ServiceLogger.LOGGER.info("Number of people found: " + people.length);
 
             //get genre info
             PreparedStatement ps2 = Util.prepareStatement(QueryBuilder.buildGenreQuery(), params);
             ResultSet rs2 = ps2.executeQuery();
             genres = ClassBuilder.buildGenreArray(rs2);
-            ServiceLogger.LOGGER.info(String.valueOf(genres.length));
+//            ServiceLogger.LOGGER.info("Number of genres found:" + genres.length);
 
             //TODO catch all instances of when resultsets of genres and people are empty
         }
@@ -114,7 +111,6 @@ public class LogicHandler {
                 return response.buildResponseWithHeaders(heads);
             }
             else{
-                ServiceLogger.LOGGER.warning("no person found with id");
                 response.setResult(Result.PEOPLE_NOT_FOUND);
                 return response.buildResponseWithHeaders(heads);
             }
@@ -133,10 +129,11 @@ public class LogicHandler {
                 for(RandomMovie movie: response.getMovies())
                     movie.print();
                 response.setResult(Result.RANDOM_FOUND);
+                ServiceLogger.LOGGER.info("Exiting Endpoint normally");
                 return response.buildResponseWithHeaders(heads);
             }
             else{
-                ServiceLogger.LOGGER.warning("No result Set found");
+                ServiceLogger.LOGGER.warning("No result Set found in Random Movie Handler");
                 response.setResult(Result.RANDOM_NOT_FOUND);
                 return response.buildResponseWithHeaders(heads);
             }
@@ -156,7 +153,6 @@ public class LogicHandler {
             PreparedStatement ps = MoviesService.getCon().prepareStatement(query);
             ResultSet rs = ps.executeQuery();
             if(rs.next()){
-                ServiceLogger.LOGGER.info("movies found");
                 movies = ClassBuilder.buildMovieArray(rs, wantsHidden, heads.getEmail());
                 if(movies.length == 0)
                     response.setResult(Result.MOVIE_NOT_FOUND);
@@ -166,25 +162,26 @@ public class LogicHandler {
                 }
             }
             else{
-                ServiceLogger.LOGGER.info("no movies found");
                 response.setResult(Result.MOVIE_NOT_FOUND);
                 return response.buildResponseWithHeaders(heads);
             }
 
         }catch(SQLException e){
-            ServiceLogger.LOGGER.warning("In logic handler for movieSearch\n" + e.getMessage());
+            ServiceLogger.LOGGER.warning("In lookForMovies\n" + e.getMessage());
             return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
         }
+
+        ServiceLogger.LOGGER.info("Exiting Endpoint normally");
         return response.buildResponseWithHeaders(heads);
     }
 
     private static Response lookForThumbnails(ThumbnailResponse response, Headers heads, boolean wantsHidden, String query ){
+        ServiceLogger.LOGGER.info("Entering lookForThumbnails");
         Thumbnail[] movies;
         try{
             PreparedStatement ps = MoviesService.getCon().prepareStatement(query);
             ResultSet rs = ps.executeQuery();
             if(rs.next()){
-                ServiceLogger.LOGGER.info("movies found");
                 movies = ClassBuilder.buildThumbnailArray(rs, wantsHidden, heads.getEmail());
                 if(movies.length == 0)
                     response.setResult(Result.MOVIE_NOT_FOUND);
@@ -194,25 +191,26 @@ public class LogicHandler {
                 }
             }
             else{
-                ServiceLogger.LOGGER.info("no movies found");
                 response.setResult(Result.MOVIE_NOT_FOUND);
                 return response.buildResponseWithHeaders(heads);
             }
 
         }catch(SQLException e){
-            ServiceLogger.LOGGER.warning("In logic handler for movieSearch\n" + e.getMessage());
+            ServiceLogger.LOGGER.warning("In lookForThumbnails\n"+ e.getMessage());
             return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
         }
+
+        ServiceLogger.LOGGER.info("Exiting Endpoint normally");
         return response.buildResponseWithHeaders(heads);
     }
 
     private static Response lookforPeople(Headers heads, PeopleSearchResponse response, String query){
+        ServiceLogger.LOGGER.info("Entering lookForPeople");
         Person[] people;
         try{
             PreparedStatement ps = MoviesService.getCon().prepareStatement(query);
             ResultSet rs = ps.executeQuery();
             if(rs.next()){
-                ServiceLogger.LOGGER.info("people found");
                 people = ClassBuilder.buildPeopleSearchArray(rs);
                 if(people.length == 0)
                     response.setResult(Result.PEOPLE_NOT_FOUND);
@@ -222,15 +220,16 @@ public class LogicHandler {
                 }
             }
             else{
-                ServiceLogger.LOGGER.info("no people found");
                 response.setResult(Result.PEOPLE_NOT_FOUND);
                 return response.buildResponseWithHeaders(heads);
             }
 
         }catch(SQLException e){
-            ServiceLogger.LOGGER.warning("In logic handler for movieSearch\n" + e.getMessage());
+            ServiceLogger.LOGGER.warning("In lookForPeople\n" + e.getMessage());
             return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
         }
+
+        ServiceLogger.LOGGER.info("Exiting Endpoint normally");
         return response.buildResponseWithHeaders(heads);
     }
 

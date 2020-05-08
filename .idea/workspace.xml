@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e2a40a3-f83d-40f2-b559-340391ba02bb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/MovieClasses/RandomMovie.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/MovieClasses/TestDeserialize.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/MovieRandomRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/MovieRandomResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/TestDeserializeClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -15,18 +10,34 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/edu/uci/ics/luisae/service/movies/Base/ResponseModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/edu/uci/ics/luisae/service/movies/Base/ResponseModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/edu/uci/ics/luisae/service/movies/core/ClassBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/edu/uci/ics/luisae/service/movies/core/ClassBuilder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/edu/uci/ics/luisae/service/movies/core/LogicHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/edu/uci/ics/luisae/service/movies/core/LogicHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/edu/uci/ics/luisae/service/movies/core/QueryBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/edu/uci/ics/luisae/service/movies/core/QueryBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/edu/uci/ics/luisae/service/movies/database/Intercommunication.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/edu/uci/ics/luisae/service/movies/database/Intercommunication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/edu/uci/ics/luisae/service/movies/models/MovieClasses/FullMovie.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/edu/uci/ics/luisae/service/movies/models/MovieClasses/FullMovie.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/edu/uci/ics/luisae/service/movies/models/MovieClasses/Movie.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/edu/uci/ics/luisae/service/movies/models/MovieClasses/Movie.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/edu/uci/ics/luisae/service/movies/models/MovieClasses/RandomMovie.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/edu/uci/ics/luisae/service/movies/models/MovieClasses/RandomMovie.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/edu/uci/ics/luisae/service/movies/models/MovieSearchResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/edu/uci/ics/luisae/service/movies/models/MovieSearchResponse.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/edu/uci/ics/luisae/service/movies/resources/MovieEndpoints.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/edu/uci/ics/luisae/service/movies/resources/MovieEndpoints.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/edu/uci/ics/luisae/service/movies/utilities/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/edu/uci/ics/luisae/service/movies/utilities/Util.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/distributions/edu.uci.ics.luisae.service.movies-shadow.tar" beforeDir="false" afterPath="$PROJECT_DIR$/build/distributions/edu.uci.ics.luisae.service.movies-shadow.tar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/distributions/edu.uci.ics.luisae.service.movies-shadow.zip" beforeDir="false" afterPath="$PROJECT_DIR$/build/distributions/edu.uci.ics.luisae.service.movies-shadow.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/distributions/edu.uci.ics.luisae.service.movies.tar" beforeDir="false" afterPath="$PROJECT_DIR$/build/distributions/edu.uci.ics.luisae.service.movies.tar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/distributions/edu.uci.ics.luisae.service.movies.zip" beforeDir="false" afterPath="$PROJECT_DIR$/build/distributions/edu.uci.ics.luisae.service.movies.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/libs/edu.uci.ics.luisae.service.movies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/edu.uci.ics.luisae.service.movies.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/libs/logs/basic.log" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/logs/basic.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/Base/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/Base/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/Base/ResponseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/Base/ResponseModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/core/ClassBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/core/ClassBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/core/LogicHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/core/LogicHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/core/QueryBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/core/QueryBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/database/Intercommunication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/database/Intercommunication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/MovieClasses/FullMovie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/MovieClasses/FullMovie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/MovieClasses/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/MovieClasses/Movie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/MovieClasses/RandomMovie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/MovieClasses/RandomMovie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/MovieSearchResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/MovieSearchResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/resources/MovieEndpoints.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/resources/MovieEndpoints.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/utilities/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/utilities/Util.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -51,8 +62,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/resources/MovieEndpoints.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="210" column="62" selection-start-line="210" selection-start-column="62" selection-end-line="210" selection-end-column="62" />
+            <state relative-caret-position="1819">
+              <caret line="122" column="21" selection-start-line="122" selection-start-column="21" selection-end-line="122" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -63,20 +74,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/core/LogicHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="125" column="64" lean-forward="true" selection-start-line="125" selection-start-column="64" selection-end-line="125" selection-end-column="64" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/core/QueryBuilder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="267" column="76" selection-start-line="267" selection-start-column="76" selection-end-line="267" selection-end-column="76" />
+            <state relative-caret-position="2907">
+              <caret line="184" column="33" selection-start-line="184" selection-start-column="33" selection-end-line="184" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -85,10 +84,49 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/MovieRandomRequest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/core/ClassBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="4" column="52" selection-start-line="4" selection-start-column="52" selection-end-line="4" selection-end-column="52" />
+            <state relative-caret-position="1241">
+              <caret line="80" column="66" selection-start-line="80" selection-start-column="66" selection-end-line="80" selection-end-column="66" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/MovieIdResponse.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/MovieSearchResponse.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/utilities/Util.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="460">
+              <caret line="78" selection-start-line="78" selection-end-line="78" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -126,13 +164,8 @@
         <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/FullMovieResponse.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/FullMovie.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/MovieIdResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/MovieClasses/FullMovie.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/utilities/Util.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/Base/ResponseModel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/database/Intercommunication.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/PhraseResponse.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/MovieClasses/ThumbnailRequest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/MovieClasses/Movie.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/MovieClasses/ThumbnailResponse.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/MovieClasses/Thumbnail.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/ThumbnailResponse.java" />
@@ -140,29 +173,34 @@
         <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/PeopleRequest.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/PeopleSeachRequest.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/PeopleSearchResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/core/ClassBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/PersonIdSearchResponse.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/MovieClasses/Person.java" />
         <option value="$PROJECT_DIR$/build/libs/config.yaml" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/MovieSearchResponse.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/MovieSeachRequest.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/MovieRandomRequest.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/MovieClasses/MovieRandomResponse.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/MovieClasses/TestDeserialize.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/TestDeserializeClass.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/resources/MovieEndpoints.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/MovieRandomResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/MovieClasses/RandomMovie.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/Base/Result.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/core/LogicHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/MovieClasses/RandomMovie.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/core/QueryBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/resources/MovieEndpoints.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/Base/ResponseModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/utilities/Util.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/core/LogicHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/core/ClassBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/database/Intercommunication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/MovieClasses/Movie.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/MovieSearchResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/MovieClasses/FullMovie.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
-    <option name="width" value="979" />
-    <option name="height" value="1050" />
+    <option name="width" value="785" />
+    <option name="height" value="840" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -170,7 +208,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -231,20 +269,20 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="movies" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../cs122b-starter-hw5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -389,17 +427,83 @@
       <workItem from="1579818807387" duration="591000" />
       <workItem from="1579908218368" duration="8500000" />
       <workItem from="1580089893057" duration="1196000" />
-      <workItem from="1580165602671" duration="12373000" />
+      <workItem from="1580165602671" duration="12868000" />
+      <workItem from="1580250620517" duration="1838000" />
+      <workItem from="1580338158852" duration="5124000" />
+      <workItem from="1580422984815" duration="1605000" />
+      <workItem from="1580511637844" duration="2231000" />
+      <workItem from="1580522471776" duration="1252000" />
+      <workItem from="1580770689139" duration="2714000" />
+      <workItem from="1580857323716" duration="1122000" />
+      <workItem from="1580871279874" duration="689000" />
+      <workItem from="1580941996036" duration="2210000" />
+      <workItem from="1581113881585" duration="594000" />
+      <workItem from="1581375710661" duration="3773000" />
+      <workItem from="1581462651129" duration="1282000" />
+      <workItem from="1581544945871" duration="2118000" />
+      <workItem from="1581551373974" duration="1413000" />
+      <workItem from="1581650227870" duration="4189000" />
+      <workItem from="1581719866936" duration="13000" />
+      <workItem from="1581719914062" duration="1735000" />
+      <workItem from="1581734688147" duration="639000" />
+      <workItem from="1581904351457" duration="568000" />
+      <workItem from="1581991252862" duration="590000" />
+      <workItem from="1582065325465" duration="1891000" />
+      <workItem from="1582154103546" duration="1575000" />
+      <workItem from="1582238302647" duration="1199000" />
+      <workItem from="1582324621071" duration="1844000" />
+      <workItem from="1582605998387" duration="53000" />
+      <workItem from="1582757352628" duration="1865000" />
+      <workItem from="1582842027839" duration="4580000" />
+      <workItem from="1582935939277" duration="710000" />
+      <workItem from="1583187957073" duration="1191000" />
+      <workItem from="1583272488756" duration="592000" />
+      <workItem from="1583360054635" duration="1989000" />
+      <workItem from="1583447608696" duration="1976000" />
+      <workItem from="1583537208196" duration="1844000" />
+      <workItem from="1583788812091" duration="622000" />
+      <workItem from="1583887648339" duration="1745000" />
+      <workItem from="1583964929313" duration="559000" />
+      <workItem from="1583971087248" duration="1262000" />
+      <workItem from="1584569877060" duration="4931000" />
+      <workItem from="1585006346160" duration="614000" />
+      <workItem from="1585007291328" duration="987000" />
+      <workItem from="1585177598424" duration="2291000" />
+      <workItem from="1585266591155" duration="588000" />
+      <workItem from="1585596843695" duration="1493000" />
+      <workItem from="1585786773528" duration="1203000" />
+      <workItem from="1585871259088" duration="881000" />
+      <workItem from="1586218261013" duration="599000" />
+      <workItem from="1586303050015" duration="1205000" />
+      <workItem from="1586559446605" duration="2138000" />
+      <workItem from="1586807344810" duration="1208000" />
+      <workItem from="1586904932951" duration="3254000" />
+      <workItem from="1586995708240" duration="597000" />
+      <workItem from="1587074787927" duration="1200000" />
+      <workItem from="1587166698024" duration="1198000" />
+      <workItem from="1587422544626" duration="1205000" />
+      <workItem from="1587507365183" duration="1867000" />
+      <workItem from="1587687622429" duration="1005000" />
+      <workItem from="1587773035478" duration="598000" />
+      <workItem from="1588010853382" duration="4132000" />
+      <workItem from="1588112265053" duration="1792000" />
+      <workItem from="1588370248277" duration="1807000" />
+      <workItem from="1588636492476" duration="1205000" />
+      <workItem from="1588642473553" duration="230000" />
+      <workItem from="1588719961876" duration="50000" />
+      <workItem from="1588720052757" duration="1920000" />
+      <workItem from="1588813922631" duration="938000" />
+      <workItem from="1588895294915" duration="1449000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="186466000" />
+    <option name="totallyTimeSpent" value="290742000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1785235" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.02818792" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -414,7 +518,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.32960895" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.39944133" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.24301676" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
@@ -473,9 +577,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/core/BadRequest.java" />
     <entry file="file://$PROJECT_DIR$/build/libs/logs/basic.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/utilities/Param.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/Movie.java" />
@@ -589,16 +690,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/MovieIdResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/PersonIdSearchResponse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -616,13 +707,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/Base/Headers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -644,26 +728,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/database/Intercommunication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/MovieClasses/FullMovie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1263">
-          <caret line="38" column="28" lean-forward="true" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -702,26 +766,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/MovieClasses/Movie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="34" lean-forward="true" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/MovieSearchResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/MoviesService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -729,13 +773,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/libs/config.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -750,16 +787,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/core/ClassBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-32">
-          <caret line="42" column="24" lean-forward="true" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/TestDeserializeClass.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -770,80 +797,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/utilities/Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="54" column="67" lean-forward="true" selection-start-line="54" selection-start-column="67" selection-end-line="54" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/MovieClasses/RandomMovie.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-323">
-          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1006#1007#0" expanded="true" />
-            <element signature="e#1034#1035#0" expanded="true" />
-            <element signature="e#1076#1077#0" expanded="true" />
-            <element signature="e#1110#1111#0" expanded="true" />
-            <element signature="e#1147#1148#0" expanded="true" />
-            <element signature="e#1174#1175#0" expanded="true" />
-            <element signature="e#1215#1216#0" expanded="true" />
-            <element signature="e#1247#1248#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/Base/Result.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="37" column="69" selection-start-line="37" selection-start-column="69" selection-end-line="37" selection-end-column="69" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/Base/ResponseModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="66" column="16" lean-forward="true" selection-start-line="66" selection-start-column="16" selection-end-line="66" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/MovieRandomResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#873#874#0" expanded="true" />
-            <element signature="e#1042#1043#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/resources/MovieEndpoints.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="210" column="62" selection-start-line="210" selection-start-column="62" selection-end-line="210" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/core/LogicHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="125" column="64" lean-forward="true" selection-start-line="125" selection-start-column="64" selection-end-line="125" selection-end-column="64" />
+        <state relative-caret-position="1224">
+          <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -852,15 +809,160 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/MovieRandomRequest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
+        <state relative-caret-position="68">
           <caret line="4" column="52" selection-start-line="4" selection-start-column="52" selection-end-line="4" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/MovieRandomResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#837#838#0" expanded="true" />
+            <element signature="e#873#874#0" expanded="true" />
+            <element signature="e#1013#1014#0" expanded="true" />
+            <element signature="e#1042#1043#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/libs/config.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/Base/Headers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/Base/ResponseModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="632">
+          <caret line="61" column="91" lean-forward="true" selection-start-line="61" selection-start-column="91" selection-end-line="61" selection-end-column="91" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/Base/Result.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="37" column="69" selection-start-line="37" selection-start-column="69" selection-end-line="37" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/core/QueryBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="267" column="76" selection-start-line="267" selection-start-column="76" selection-end-line="267" selection-end-column="76" />
+        <state relative-caret-position="485">
+          <caret line="261" column="48" selection-start-line="261" selection-start-column="48" selection-end-line="261" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/database/Intercommunication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="39" column="72" selection-start-line="39" selection-start-column="72" selection-end-line="39" selection-end-column="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/utilities/Param.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/MovieClasses/Movie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="66" column="5" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/MovieClasses/FullMovie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="128" column="45" selection-start-line="128" selection-start-column="45" selection-end-line="128" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/resources/MovieEndpoints.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1819">
+          <caret line="122" column="21" selection-start-line="122" selection-start-column="21" selection-end-line="122" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/core/LogicHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2907">
+          <caret line="184" column="33" selection-start-line="184" selection-start-column="33" selection-end-line="184" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/core/ClassBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1241">
+          <caret line="80" column="66" selection-start-line="80" selection-start-column="66" selection-end-line="80" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/MovieIdResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/models/MovieSearchResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/luisae/service/movies/utilities/Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="78" selection-start-line="78" selection-end-line="78" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

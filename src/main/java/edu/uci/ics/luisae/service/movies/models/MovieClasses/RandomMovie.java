@@ -8,6 +8,7 @@ import edu.uci.ics.luisae.service.movies.logger.ServiceLogger;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class RandomMovie {
+    private String movie_id;
     private String title;
     private Integer year;
     private String backdrop_path;
@@ -15,11 +16,13 @@ public class RandomMovie {
     private String stars;
 
     @JsonCreator
-    public RandomMovie(@JsonProperty("title") String title,
+    public RandomMovie(@JsonProperty("movie_id") String movie_id,
+                       @JsonProperty("title") String title,
                        @JsonProperty("year") Integer year,
                        @JsonProperty("backdrop path") String backdrop_path,
                        @JsonProperty("poster_path") String poster_path,
                        @JsonProperty("stars") String stars){
+        this.movie_id = movie_id;
         this.title = title;
         this.year = year;
         this.backdrop_path = backdrop_path;
@@ -27,6 +30,14 @@ public class RandomMovie {
         this.stars = stars;
     }
 
+
+    public String getMovie_id() {
+        return movie_id;
+    }
+
+    public void setMovie_id(String movie_id) {
+        this.movie_id = movie_id;
+    }
 
     public String getStars() {
         return stars;
@@ -71,6 +82,7 @@ public class RandomMovie {
 
     @JsonIgnore
     public void print(){
+        ServiceLogger.LOGGER.info("movie_id: " + (movie_id == null? "null":movie_id));
         ServiceLogger.LOGGER.info("title: " + (title == null? "null":title));
         ServiceLogger.LOGGER.info("year: " + year);
         ServiceLogger.LOGGER.info("backdrop: " + (backdrop_path.isEmpty()? "null":backdrop_path));

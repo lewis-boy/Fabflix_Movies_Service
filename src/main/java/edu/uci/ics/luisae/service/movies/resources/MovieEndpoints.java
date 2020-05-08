@@ -33,7 +33,7 @@ public class MovieEndpoints {
                             @QueryParam("offset") Integer offset,
                             @QueryParam("orderby") String orderby,
                             @QueryParam("direction") String direction){
-        ServiceLogger.LOGGER.info("entering search");
+        ServiceLogger.LOGGER.info("Entering Basic Search Endpoint");
         MovieSearchResponse response = new MovieSearchResponse();
         MovieSeachRequest request = new MovieSeachRequest(
                 title,
@@ -49,15 +49,7 @@ public class MovieEndpoints {
         heads.setEmail(headers.getHeaderString("email"));
         heads.setSession_id(headers.getHeaderString("session_id"));
         heads.setTransaction_id(headers.getHeaderString("transaction_id"));
-//        ArrayList<String> a = request.buildStringArrayList();
-//        for(String s : a)
-//            ServiceLogger.LOGGER.info(s);
-//        ServiceLogger.LOGGER.info(QueryBuilder.buildMovieSearchQuery(request.buildStringArrayList(),request));
         return LogicHandler.MovieSearchHandler(heads, request, response);
-
-
-
-        //return Response.status(Response.Status.OK).build();
     }
 
 
@@ -66,6 +58,7 @@ public class MovieEndpoints {
     @Produces(MediaType.APPLICATION_JSON)
     public Response getMovieId(@Context HttpHeaders headers,
                                @PathParam("movie_id") String movie_id){
+        ServiceLogger.LOGGER.info("Entering Get Movie ID Endpoint");
         MovieIdResponse response = new MovieIdResponse();
         //could of done this with just a string but when its for ints or something else use ? and set it
         Param[] params = new Param[]{
@@ -89,6 +82,7 @@ public class MovieEndpoints {
                            @QueryParam("orderby") String orderby,
                            @QueryParam("direction") String direction,
                            @PathParam("phrase")String phrase){
+        ServiceLogger.LOGGER.info("Entering Browse Phrase Endpoint");
         MovieSeachRequest request = new MovieSeachRequest(
                 null,
                 null,
@@ -104,8 +98,8 @@ public class MovieEndpoints {
         heads.setEmail(headers.getHeaderString("email"));
         heads.setSession_id(headers.getHeaderString("session_id"));
         heads.setTransaction_id(headers.getHeaderString("transaction_id"));
-        ServiceLogger.LOGGER.info(phrase);
-        String[] phrases = phrase.split(",");
+        String fixed = phrase.replace("]","").replace("[","");
+        String[] phrases = fixed.split(",");
 
         return LogicHandler.PhraseHandler(phrases, heads, response, request);
     }
@@ -115,7 +109,7 @@ public class MovieEndpoints {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response thumbnail(@Context HttpHeaders headers, String jsonText){
-        ServiceLogger.LOGGER.info(jsonText);
+        ServiceLogger.LOGGER.info("Entering Thumbnail Endpoint");
         ThumbnailResponse response = new ThumbnailResponse();
         ThumbnailRequest request = Util.modelMapper(jsonText, ThumbnailRequest.class);
         Headers heads = new Headers();
@@ -123,10 +117,8 @@ public class MovieEndpoints {
         heads.setSession_id(headers.getHeaderString("session_id"));
         heads.setTransaction_id(headers.getHeaderString("transaction_id"));
         if(request == null){
-            ServiceLogger.LOGGER.warning("request was null");
             return response.buildResponseWithHeaders(heads);
         }
-        ServiceLogger.LOGGER.info("All models made successfully");
 
         return LogicHandler.ThumbnailHandler(heads, response, request);
     }
@@ -142,6 +134,7 @@ public class MovieEndpoints {
                               @QueryParam(value = "offset")Integer offset,
                               @QueryParam(value = "orderby")String orderby,
                               @QueryParam(value = "direction")String direction){
+        ServiceLogger.LOGGER.info("Entering Movies by People Endpoint");
         PeopleRequest request = new PeopleRequest(
                 name,
                 limit,
@@ -155,7 +148,6 @@ public class MovieEndpoints {
         heads.setTransaction_id(headers.getHeaderString("transaction_id"));
         request.print();
         return LogicHandler.PeopleMovieHandler(heads, request, response);
-
     }
 
     @Path("people/search")
@@ -169,6 +161,7 @@ public class MovieEndpoints {
                                  @QueryParam(value = "offset") Integer offset,
                                  @QueryParam(value = "orderby") String orderby,
                                  @QueryParam(value = "direction") String direction){
+        ServiceLogger.LOGGER.info("Entering People Search Endpoint");
         PeopleSeachRequest request = new PeopleSeachRequest(name,
                 birthday,
                 movie_title,
@@ -189,6 +182,7 @@ public class MovieEndpoints {
     @Produces(MediaType.APPLICATION_JSON)
     public Response getPersonId(@Context HttpHeaders headers,
                                 @PathParam(value = "person_id") String person_id){
+        ServiceLogger.LOGGER.info("Entering People Id Endpoint");
         PersonIdSearchResponse response = new PersonIdSearchResponse();
         Headers heads = new Headers();
         heads.setEmail(headers.getHeaderString("email"));
@@ -203,32 +197,12 @@ public class MovieEndpoints {
     public Response getRandomMovies(@Context HttpHeaders headers,
                                     @QueryParam("genre") String genre,
                                     @QueryParam("limit") Integer limit){
+        ServiceLogger.LOGGER.info("Entering Random Movies Endpoint");
         MovieRandomRequest request = new MovieRandomRequest(genre,limit);
         MovieRandomResponse response = new MovieRandomResponse();
         Headers heads = new Headers();
-        heads.setEmail(headers.getHeaderString("email"));
-        heads.setSession_id(headers.getHeaderString("session_id"));
         heads.setTransaction_id(headers.getHeaderString("transaction_id"));
         return LogicHandler.MovieRandomHandler(heads, request, response);
     }
-
-
-
-
-    @Path("test")
-    @POST
-    @Produces(MediaType.APPLICATION_JSON)
-    @Consumes(MediaType.APPLICATION_JSON)
-    public Response test(String jsonText){
-        //test with json types how to deserialize objects
-        ServiceLogger.LOGGER.info(jsonText);
-        TestDeserializeClass testClass = Util.modelMapper(jsonText, TestDeserializeClass.class);
-        if(testClass == null)
-            ServiceLogger.LOGGER.warning("FAILED");
-        else
-            ServiceLogger.LOGGER.info("PASSED");
-        return Response.status(Response.Status.OK).build();
-    }
-
 
 }

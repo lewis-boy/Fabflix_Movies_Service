@@ -5,7 +5,6 @@ import edu.uci.ics.luisae.service.movies.logger.ServiceLogger;
 import edu.uci.ics.luisae.service.movies.models.MovieClasses.*;
 import edu.uci.ics.luisae.service.movies.utilities.Util;
 
-import java.lang.invoke.SerializedLambda;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -49,10 +48,8 @@ public class ClassBuilder {
         boolean hasPrivilege = false;
         boolean movieIsHidden;
         ArrayList<Movie> movieList = new ArrayList<>();
-        ServiceLogger.LOGGER.info("TEST 1");
         if(wantsHidden)
             hasPrivilege = Intercommunication.hasPrivilege(email,4);
-        ServiceLogger.LOGGER.info("TEST 2");
         try{
             rs.beforeFirst();
             //maybe here
@@ -61,7 +58,6 @@ public class ClassBuilder {
                 movieList.add(movie);
             }
         }catch(SQLException e){ServiceLogger.LOGGER.warning("result set problem");return null;}
-        ServiceLogger.LOGGER.info("successfully built array list: " + movieList.size());
         Movie[] movieArray = new Movie[movieList.size()];
         for(int i = 0; i < movieList.size(); i++) {
             //HERE is the BUG
@@ -74,7 +70,6 @@ public class ClassBuilder {
             movieArray[i] = movieList.get(i);
         }
 
-        ServiceLogger.LOGGER.info("successfully built movie array: " + movieArray.length);
         return movieArray;
     }
 
@@ -82,10 +77,8 @@ public class ClassBuilder {
         boolean hasPrivilege = false;
         boolean movieIsHidden;
         ArrayList<Thumbnail> movieList = new ArrayList<>();
-        ServiceLogger.LOGGER.info("TEST 1");
         if(wantsHidden)
             hasPrivilege = Intercommunication.hasPrivilege(email,4);
-        ServiceLogger.LOGGER.info("TEST 2");
         try{
             rs.beforeFirst();
             //maybe here
@@ -94,7 +87,6 @@ public class ClassBuilder {
                 movieList.add(movie);
             }
         }catch(SQLException e){ServiceLogger.LOGGER.warning("result set problem: thumbnail");return null;}
-        ServiceLogger.LOGGER.info("successfully built array list: " + movieList.size());
         Thumbnail[] movieArray = new Thumbnail[movieList.size()];
         for(int i = 0; i < movieList.size(); i++) {
             //HERE is the BUG
@@ -107,7 +99,6 @@ public class ClassBuilder {
             movieArray[i] = movieList.get(i);
         }
 
-        ServiceLogger.LOGGER.info("successfully built movie array: " + movieArray.length);
         return movieArray;
     }
 
@@ -121,11 +112,9 @@ public class ClassBuilder {
                 personList.add(person);
             }
         }catch(SQLException e){ServiceLogger.LOGGER.warning("result set problem: people");return null;}
-        ServiceLogger.LOGGER.info("successfully built person array list: " + personList.size());
         Person[] personArray = new Person[personList.size()];
         for(int i = 0; i < personList.size();i++)
             personArray[i] = personList.get(i);
-        ServiceLogger.LOGGER.info("successfully built person array: " + personArray.length);
         return personArray;
     }
 

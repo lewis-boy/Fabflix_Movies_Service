@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import edu.uci.ics.luisae.service.movies.Base.ResponseModel;
-import edu.uci.ics.luisae.service.movies.models.MovieClasses.FullMovie;
 import edu.uci.ics.luisae.service.movies.models.MovieClasses.Movie;
 
 public class MovieSearchResponse extends ResponseModel {
